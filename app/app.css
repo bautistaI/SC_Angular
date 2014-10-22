@@ -58,22 +58,59 @@ li {
 .add-space-right {
   margin-right: 10px; }
 
-/*=== ACCOUNT === */
+/* --- Animation --- */
+.animate-view-container {
+  position: relative;
+  min-height: 100%; }
+
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+  transition: 500ms linear all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #eee; }
+
+.animate-view.ng-enter {
+  opacity: 0;
+  z-index: 100; }
+
+.animate-view.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+.animate-view.ng-leave {
+  opacity: 1;
+  z-index: 99; }
+
+.animate-view.ng-leave.ng-leave-active {
+  opacity: 0; }
+
+/* --- @end Animation --- */
+.container-fluid {
+  margin-right: 10px;
+  margin-left: 10px; }
+
+.container-fluid .col-md-2 {
+  width: 15.666667%; }
+
+/* ============================ ACCOUNT ========================== */
 .sidebar-left {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 20px;
-  border-radius: 10px; }
+  border-radius: 5px; }
 
 .fake-user {
   width: 100px;
   height: 100px;
   background: #95a5a6;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 0 auto; }
 
 .account-menu {
   background: #95a5a6;
-  border-radius: 10px; }
+  border-radius: 5px; }
   .account-menu .active {
     background: #ecf0f1; }
   .account-menu li {
@@ -86,3 +123,7 @@ li {
     display: block;
     color: #2c3e50;
     padding: 20px; }
+
+.account-settings {
+  border: 1px solid #ccd4d5;
+  border-radius: 5px; }

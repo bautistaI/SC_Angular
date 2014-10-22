@@ -1,11 +1,11 @@
 <div class="container-fluid">
-	<h1>Tweet Stream</h1>
+	<h1>Billing Info</h1>
 	<div class="row">
 		<div class="col-md-2 col-xs-12 sidebar-left pull-left">
 			<div class="current-account">
 				<p class="lead text-center"><strong>Malone Bakery</strong></p>
 				<p class="fake-user"></p>
-				<p class="handle text-center">@JohnDoe</p>
+				<p class="handle text-center">@JohnDoe</p> 
 				<hr>
 				<p class="text-center"><a href="#">Change Twitter Account</a></p>
 				<hr>
@@ -14,8 +14,12 @@
 					<button type="button" class="btn btn-default col-md-6">ESPANOL</button>
 				</div>
 			</div>
-			<hr> 
+			<hr>
+			<ul class="text-left account-menu">
+				<li><a role="button" ng-href="#/account-settings">Account Settings</a></li>
+				<li><a role="button" ng-href="#/billing-information">Billing Information</a></li>
+				<li><a role="button" ng-href="#/email-settings">Email Settings</a></li>
+			</ul>
 		</div>
-		<div class="col-md-10 col-xs-12 account-settings pull-right" ng-include="'views/account/billing-information'"></div>
 	</div>
 </div>

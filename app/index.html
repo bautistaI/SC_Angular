@@ -25,7 +25,7 @@
 		<!-- links to collapse -->
 		<div class="navbar-collapse collapse">
 			<ul class="nav nav-pills pull-right add-space-left">
-				<li><a ng-href="#/account">Account</a></li>
+				<li><a ng-href="#/account-settings">Account</a></li>
 			  <li><a ng-href="#/logout">Log Out</a></li>
 			</ul>
 			<ul class="nav nav-pills pull-right add-space-right">
@@ -39,7 +39,9 @@
 	</div><!-- @end container fluid -->
 </nav>
 
-<div ng-view></div>
+<div class="animate-view-container">
+  <div ng-view class="animate-view"></div>
+</div>
 
 
 
@@ -50,6 +52,7 @@
 <script src="bower_components/flat-ui/dist/js/flat-ui.min.js"></script>
 <!-- <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
 <script src="app.js"></script>
+<script src="views/account/account.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
