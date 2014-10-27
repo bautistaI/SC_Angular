@@ -1,10 +1,11 @@
 <div class="container-fluid">
-	<h1>Account</h1>
-	<div class="row">
+	<div class="row padded">
 		<div class="col-md-2 col-xs-12 sidebar-left pull-left">
 			<div class="current-account">
 				<p class="lead text-center"><strong>Malone Bakery</strong></p>
-				<p class="fake-user"></p>
+				<p class="fake-user">
+					<img class="img-rounded" ng-src="http://lorempixel.com/100/100/people">
+				</p>
 				<p class="handle text-center">@JohnDoe</p> 
 				<hr>
 				<p class="text-center"><a href="#">Change Twitter Account</a></p>
@@ -16,10 +17,13 @@
 			</div>
 			<hr>
 			<ul class="text-left account-menu">
-				<li><a role="button" ng-href="#/account-settings">Account Settings</a></li>
-				<li><a role="button" ng-href="#/billing-information">Billing Information</a></li>
-				<li><a role="button" ng-href="#/email-settings">Email Settings</a></li>
+				<li><a role="button" ng-href="#/account/settings">Account Settings</a></li>
+				<li><a role="button" ng-href="#/account/billing">Billing Information</a></li>
+				<li><a role="button" ng-href="#/account/email">Email Settings</a></li>
 			</ul>
+		</div>
+		<div class="content">
+  		<div ui-view class="col-md-10 col-xs-10"></div>
 		</div>
 	</div>
 </div>

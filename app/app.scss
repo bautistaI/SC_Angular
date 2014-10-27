@@ -109,7 +109,6 @@ $hover-neutral: #ecf0f1;
   width: 100px;
   height: 100px;
   background: $neutral;
-  border-radius: 5px;
   margin: 0 auto;
 }
 .account-menu{
@@ -135,8 +134,50 @@ $hover-neutral: #ecf0f1;
 .account-settings{
   border: 1px solid lighten($neutral, 20%);
   border-radius: 5px;
-
 }
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.account-status{
+  .status-animation{
+    padding-left: 150px;
+  }
+  .status-content{
+    width: 500px;
+    margin-top: 20px;
+  }
+  .signup{
+    .btn{
+      width: 300px !important;
+      margin-top: 20px;
+      margin-left: 100px
+    }
+  }
+}
+.acc-info{
+  margin-top: 20px;
+}
+.acc-title{
+  border-bottom: 1px solid $neutral;
+}
+.current-twitter{
+  margin: 10px 0;
+  input{
+    width: 100%;
+  }
+}
+.current-twitter{
+  a{
+    font-size: 12px;
+    position: relative;
+    left: 130px;
+    top: -25px;
+  }
+}
+
+
 
 // ==================================================================
 

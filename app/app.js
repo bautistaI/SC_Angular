@@ -1,12 +1,21 @@
 'use strict';
 
-angular.module('MyApp', ['MyApp.account', 'ngRoute', 'ngAnimate'])
+angular.module('MyApp', [
+  'MyApp.account',
+  'MyApp.tweets',  
+  'ngAnimate', 
+  'ui.router',
+  'xeditable'])
 
-.config(['$routeProvider', function($routeProvider){
-	$routeProvider
-		.when('/', {
-			templateUrl: 'views/tweets/tweet-stream.html'
-		});
+.config(['$stateProvider', '$urlRouterProvider', 
+  function($stateProvider, $urlRouterProvider){
+	// $urlRouterProvider.otherwise("/")
+
+  $stateProvider
+		.state('home', {
+      url: '/tweets',
+      templateUrl: 'views/tweets/tweet-stream.html'
+    })
 }])
 
 .run(function($rootScope, $location, $timeout) {
