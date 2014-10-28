@@ -42,6 +42,9 @@ li{
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+.navbar-inverse{
+  border-radius: 0;
+}
 .loading {
   position:relative;
   height:100%;
@@ -99,11 +102,19 @@ $neutral: #95a5a6;
 $hover-neutral: #ecf0f1;
 
 
-/* ============================ ACCOUNT ========================== */
+
+// ==============  SIDEBAR LEFT ================
 .sidebar-left{
   border: 1px solid rgba(0,0,0,0.2);
   padding: 20px;
   border-radius: 5px;
+  .current-account{
+    a{
+      font-size: 14px;
+      padding-bottom: 2px;
+      border-bottom: 1px dashed #16a085;
+    }
+  }
 }
 .fake-user{
   width: 100px;
@@ -126,11 +137,27 @@ $hover-neutral: #ecf0f1;
     }
   }
   a{
+    font-size: 17px;
     display: block;
     color: #2c3e50;
     padding: 20px;
   }
 }
+// ============= @end sidebar left =============
+
+
+// ============= Tweet Stream =================
+
+// ====== SIDEBAR ============
+
+// ===========================
+
+
+// =========@end Tweet Stream ==========================
+
+
+
+/* ============================ ACCOUNT (account settings, billing and emai settings) ========================== */
 .account-settings{
   border: 1px solid lighten($neutral, 20%);
   border-radius: 5px;
@@ -177,6 +204,66 @@ $hover-neutral: #ecf0f1;
   }
 }
 
+// ========= Email Settings ===========
+p.subtitle{
+  font-size: 14px;
+}
+.notifications{
+  margin-top: 40px;
+  .receipts{margin-right: 200px;}
+  .statements{margin-right: 173px;}
+  .subscription{margin-right: 105px;}
+  ul{
+    li{
+
+    }
+    input {
+      display: block;
+      opacity: 0;
+    }
+    label {
+      width: 60px;
+      height: 30px;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      top: -14px;
+      background: #F24E4E;
+      border-radius: 30px;
+      border: 2px solid #fff;
+      transition: background-color 0.4s;
+      -moz-transition: background-color 0.4s;
+      -webkit-transition: background-color 0.4s;
+    }
+    label:after {
+      left: 0;
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+      content: "";
+      position: absolute;
+      top: -2px;
+      background: #FFF;
+      border-radius: 10px;
+    }
+    input:checked + label {
+      background: rgb(39, 173, 95);
+    }
+    input:checked + label:after {
+      left: auto;
+      right: 0;
+      top: -2px;
+    }
+    input:checked ~ p:nth-of-type(1) {
+      color: rgb(39, 173, 95);
+      display: block;
+    }
+    input:not(:checked) ~ p:nth-of-type(2) {
+      display: block;
+    }
+  }
+}
+// ============@end Email notifications ========================
 
 
 // ==================================================================

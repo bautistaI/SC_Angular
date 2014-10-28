@@ -36,6 +36,9 @@ li {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
+.navbar-inverse {
+  border-radius: 0; }
+
 .loading {
   position: relative;
   height: 100%;
@@ -95,11 +98,14 @@ li {
 .container-fluid .col-md-2 {
   width: 15.666667%; }
 
-/* ============================ ACCOUNT ========================== */
 .sidebar-left {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 5px; }
+  .sidebar-left .current-account a {
+    font-size: 14px;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed #16a085; }
 
 .fake-user {
   width: 100px;
@@ -119,10 +125,12 @@ li {
     .account-menu li:hover {
       background: #ecf0f1; }
   .account-menu a {
+    font-size: 17px;
     display: block;
     color: #2c3e50;
     padding: 20px; }
 
+/* ============================ ACCOUNT (account settings, billing and emai settings) ========================== */
 .account-settings {
   border: 1px solid #ccd4d5;
   border-radius: 5px; }
@@ -158,3 +166,52 @@ li {
   position: relative;
   left: 130px;
   top: -25px; }
+
+p.subtitle {
+  font-size: 14px; }
+
+.notifications {
+  margin-top: 40px; }
+  .notifications .receipts {
+    margin-right: 200px; }
+  .notifications .statements {
+    margin-right: 173px; }
+  .notifications .subscription {
+    margin-right: 105px; }
+  .notifications ul input {
+    display: block;
+    opacity: 0; }
+  .notifications ul label {
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    background: #F24E4E;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    transition: background-color 0.4s;
+    -moz-transition: background-color 0.4s;
+    -webkit-transition: background-color 0.4s; }
+  .notifications ul label:after {
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    content: "";
+    position: absolute;
+    top: -2px;
+    background: #FFF;
+    border-radius: 10px; }
+  .notifications ul input:checked + label {
+    background: #27ad5f; }
+  .notifications ul input:checked + label:after {
+    left: auto;
+    right: 0;
+    top: -2px; }
+  .notifications ul input:checked ~ p:nth-of-type(1) {
+    color: #27ad5f;
+    display: block; }
+  .notifications ul input:not(:checked) ~ p:nth-of-type(2) {
+    display: block; }

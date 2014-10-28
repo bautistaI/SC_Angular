@@ -4,24 +4,24 @@ angular.module('MyApp.account', ['ui.router'])
 .config(['$stateProvider', function($stateProvider){
 	$stateProvider
 	.state('account', {
-      url: '/account',
-      templateUrl: 'views/account/account.html',
-      controller: 'AccountCtrl'
-    })
+    url: '/account',
+    templateUrl: 'views/account/account.html',
+    controller: 'AccountCtrl'
+  })
   .state('account.settings', {
   	url: '/settings',
   	templateUrl: 'views/account/account.settings.html',
   	controller: 'SettingsCtrl'
   })
   .state('account.billing', {
-      url: '/billing',
-      templateUrl: 'views/account/account.billing.html',
-      controller: 'BillingCtrl'
+    url: '/billing',
+    templateUrl: 'views/account/account.billing.html',
+    controller: 'BillingCtrl'
   })
   .state('account.email', {
-      url: '/email',
-      templateUrl: 'views/account/account.email.html',
-      controller: 'EmailCtrl'
+    url: '/email',
+    templateUrl: 'views/account/account.email.html',
+    controller: 'EmailCtrl'
   })
 }])
 .controller('AccountCtrl', ['$scope', '$stateParams',

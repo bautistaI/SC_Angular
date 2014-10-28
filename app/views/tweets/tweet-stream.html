@@ -1,22 +1,49 @@
 <div class="container-fluid">
-	<h1>Tweet Stream</h1>
-	<div class="row">
+	<div class="row padded">
 		<div class="col-md-2 col-xs-12 sidebar-left pull-left">
 			<div class="current-account">
-				<p class="lead text-center"><strong>Malone Bakery</strong></p>
+				<p class="text-center"><strong>Malone Bakery</strong></p>
 				<p class="fake-user">
 					<img class="img-rounded" ng-src="http://lorempixel.com/100/100/people">
 				</p>
-				<p class="handle text-center">@JohnDoe</p>
+				<p class="handle text-center">@JohnDoe</p> 
 				<hr>
-				<p class="text-center"><a href="#">Change Twitter Account</a></p>
-				<hr>
+				<p class=" change-account text-center"><a href="">Change Twitter Account</a></p>
+				<!-- <hr>
 				<div class="language-selection clearfix">
 					<button type="button" class="btn btn-default col-md-6">ENGLISH</button>
 					<button type="button" class="btn btn-default col-md-6">ESPANOL</button>
-				</div>
+				</div> -->
 			</div>
-			<hr> 
+			<hr>
+			<!-- ===== Add a Keyword ===== -->
+			<!-- <form class="add-keyword" role="form" name="keywordForm" ng-submit="submitted=true; addKeyword(newKeyword)" novalidate>
+				<ul ng-repeat="keyword in keywords">
+					<li>{{keyword.title}}</li>
+				</ul>
+				<div class="form-group">
+					<label for="newKeyword"> Enter a keyword</label>
+					<input type="text" class="form-control" name="newKeyword" id="newKeyword" ng-model="newKeyword.title" required>
+					<p class="bg-danger error" ng-class="{'hide': !emptyKeyword}">You did not enter a keyword</p>
+				</div>
+				<button type="submit" class="btn btn-info">Add</button>
+			</form> -->
+			<div class="form-group">
+				<p class="acc-title">Promotion Keywords</p>
+				<ul class="keyword-list" ng-repeat="keyword in keywords">
+        	<li >{{keyword.text}}{{getRandom()}}</li>
+       	</ul>
+			</div>
+			<form ng-submit="submitted=true; addKeyword()">
+				<div class="form-group">
+					<input type="text" ng-model="formKeywordText" required>
+				</div>
+				<button type="submit" class="btn btn-info">Add</button>
+			</form>
+			<!-- ====== @end ============= -->
+		</div>
+		<div class="content">
+  		<div ui-view class="col-md-10 col-xs-10"></div>
 		</div>
 	</div>
 </div>

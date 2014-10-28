@@ -27,7 +27,8 @@
 		<!-- links to collapse -->
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav pull-right add-space-left">
-				<li><a ng-href="#/account">Account</a></li>
+				<!-- Using ui-sref to point to a child view of account -->
+				<li><a ui-sref="account.settings">Account</a></li>
 			  <li><a ng-href="#/logout">Log Out</a></li>
 			</ul>
 			<ul class="nav navbar-nav pull-right add-space-right">
@@ -59,6 +60,7 @@
 <script src="app.js"></script>
 <script src="views/tweets/tweets.js"></script>
 <script src="views/account/account.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
