@@ -1,0 +1,18 @@
+<div class="container-fluid">
+	<div class="row padded">
+		<div class="col-md-12 col-xs-12">
+			<!-- FIXME! can't get the title to update base on the active url -->
+			<h1 class="text-center setup-title text-uppercase" ng-model="currentStep">{{currentStep}}</h1>
+			<ul class="setup-steps list-inline text-center">
+				<li><a class="text-uppercase" role="button" ui-sref="setup.details" ng-if="currentStep = 'Account details' "><span class="fui-check-circle"></span> Account details</a></li>
+				<li><a class="text-uppercase" role="button" ui-sref="setup.campaign"><span class="fui-check-circle"></span> Campaign</a></li>
+				<li><a class="text-uppercase" role="button" ui-sref="setup.incentive"><span class="fui-check-circle"></span> Incentive</a></li>
+				<li><a class="text-uppercase" role="button" ui-sref="setup.review"><span class="fui-check-circle"></span> Review</a></li>
+			</ul>
+			<hr>
+		</div>
+		<div class="well">
+  		<div ui-view></div>
+		</div>
+	</div>
+</div>

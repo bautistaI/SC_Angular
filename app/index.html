@@ -10,41 +10,31 @@
 	<link rel="stylesheet" href="app.css">
     <title>SocialCentiv</title>
 </head>
-<body ng-cloak class="ng-cloak" ng-class="{loading: isLoading}">
-<nav class="navbar navbar-inverse navbar-embossed" role="navigation">
-	<div class="container-fluid">
-		<!-- nav header -->
-		<div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">SocialCentiv</a>
-    </div>
-		<!-- @nav header -->
-		<!-- links to collapse -->
-		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav pull-right add-space-left">
-				<!-- Using ui-sref to point to a child view of account -->
-				<li><a ui-sref="account.settings">Account</a></li>
-			  <li><a ng-href="#/logout">Log Out</a></li>
-			</ul>
-			<ul class="nav navbar-nav pull-right add-space-right">
-			  <li><a ng-href="#/tweets">Tweet Stream</a></li>
-			  <li><a ng-href="#/campaign">Campaign</a></li>
-			  <li><a ng-href="#/reporting">Reporting</a></li>
-			  <li><a ng-href="#/contact">Contact</a></li>
-			  <li><a ng-href="#/help">Help Center</a></li>
-			</ul>
-		</div>
-	</div><!-- @end container fluid -->
-</nav>
 
-<div class="animate-view-container">
-  <div ui-view class="animate-view"></div>
-</div>
+
+
+
+<body ng-cloak class="ng-cloak" ng-class="{loading: isLoading}">
+
+	<!-- Global navigation -->
+	<nav class="navbar navbar-inverse navbar-custom navbar-embossed" role="navigation" ng-include=" 'partials/navigation/nav.html' "></nav>
+
+
+	<!-- Main View -->
+	<div class="animate-view-container">
+	  <div ui-view class="container animate-view"></div>
+	</div>
+
+
+
+	<!-- Footer -->
+	<nav class="navbar navbar-inverse navbar-custom navbar-embossed navbar-fixed-bottom" role="navigation" ng-include=" 'partials/footer/footer.html' "></nav>
+
+
+
+
+
+
 
 
 
@@ -58,8 +48,9 @@
 <script src="components/messenger/js/messenger.min.js"></script>
 <script src="components/messenger/js/messenger.js"></script>
 <script src="app.js"></script>
-<script src="views/tweets/tweets.js"></script>
-<script src="views/account/account.js"></script>
+<script src="partials/tweets/tweets.js"></script>
+<script src="partials/account/account.js"></script>
+<script src="partials/setup/setup.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>

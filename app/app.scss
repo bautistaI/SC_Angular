@@ -45,6 +45,13 @@ li{
 .navbar-inverse{
   border-radius: 0;
 }
+.navbar-brand{
+  cursor: pointer;
+}
+.navbar-custom{
+  background: #399ACF;
+  border-radius: 0;
+}
 .loading {
   position:relative;
   height:100%;
@@ -68,6 +75,7 @@ li{
   margin-right: 10px;
 }
 /* --- Animation --- */
+// main container ==============
 .animate-view-container { position:relative; min-height: 100%; }
 .animate-view.ng-enter,
 .animate-view.ng-leave {
@@ -83,6 +91,9 @@ li{
 .animate-view.ng-enter.ng-enter-active { opacity:1; }
 .animate-view.ng-leave { opacity:1; z-index:99; }
 .animate-view.ng-leave.ng-leave-active { opacity:0; }
+// =====================
+
+
 /* --- @end Animation --- */
 
 // ======== Override Bootstrap Styles ==========
@@ -97,17 +108,73 @@ li{
 
 // =============   Style Colors =============
 // gray
-$neutral: #95a5a6; 
+$neutral: #E7EBEF; 
 // light-gray
-$hover-neutral: #ecf0f1;
+$hover-neutral: #D3D6DA;
+
+.help-block{
+  color: #DE462B;
+}
+$blue: #399ACF;
+
+hr{
+  border-top: 1px solid darken($neutral, 5%);
+}
+
+// =============================================================================================
+
+// ======================== Setup ========================
+
+.fake-logo{
+  width: 200px;
+  height: 200px;
+  border: 2px dashed darken($neutral, 10%);
+  border-radius: 10px;
+  padding-top: 20px;
+  .fui-upload{
+    font-size: 40px;
+    margin-left: 40%;
+    color: darken($neutral, 10%)
+  }
+  p{
+    color: darken($neutral, 10%);
+    font-size: 15px;
+  }
+}
+.company-name{
+  p{
+    padding: 5px;
+  }
+  button{margin-top: 10px;}
+}
+.setup-title{
+  font-size: 25px;
+}
+.setup-steps{
+  font-size: 17px;
+  a{
+    color: $blue;
+    &:hover{
+      color: lighten($blue, 20%)
+    }
+  }
+  li{
+    display: inline-block;
+    margin: 0 40px;
+  }
+}
+.select-states{
+  color: #bdc3c7;
+}
+
+// ==================== @end setup  ======================
+
 
 
 
 // ==============  SIDEBAR LEFT ================
 .sidebar-left{
-  border: 1px solid rgba(0,0,0,0.2);
   padding: 20px;
-  border-radius: 5px;
   .current-account{
     a{
       font-size: 14px;
@@ -145,15 +212,6 @@ $hover-neutral: #ecf0f1;
 }
 // ============= @end sidebar left =============
 
-
-// ============= Tweet Stream =================
-
-// ====== SIDEBAR ============
-
-// ===========================
-
-
-// =========@end Tweet Stream ==========================
 
 
 
@@ -263,6 +321,17 @@ p.subtitle{
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 // ============@end Email notifications ========================
 
 
@@ -270,6 +339,15 @@ p.subtitle{
 
 
 
+
+// ============ Footer ========================
+  .copyright{
+    padding-top: 10px;
+    a{
+      color: #FFF; 
+    }
+  }
+// =================== @end Footer ===============================================
 
 
 

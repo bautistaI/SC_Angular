@@ -1,0 +1,29 @@
+<div class="container-fluid">
+	<!-- nav header -->
+	<div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <!-- Using ui-sref to point to a child view of account -->
+    <a class="navbar-brand" ui-sref="setup.details">SocialCentiv</a>
+  </div>
+	<!-- @nav header -->
+	<!-- links to collapse -->
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav pull-right add-space-left">
+			<!-- Using ui-sref to point to a child view of account -->
+			<li><a ui-sref="account.settings">Account</a></li>
+		  <li><a ng-href="#/logout">Log Out</a></li>
+		</ul>
+		<ul class="nav navbar-nav pull-right add-space-right">
+		  <li><a ng-href="#/tweets">Tweet Stream</a></li>
+		  <li><a ng-href="#/campaign">Campaign</a></li>
+		  <li><a ng-href="#/reporting">Reporting</a></li>
+		  <li><a ng-href="#/contact">Contact</a></li>
+		  <li><a ng-href="#/help">Help Center</a></li>
+		</ul>
+	</div>
+</div><!-- @end container fluid -->

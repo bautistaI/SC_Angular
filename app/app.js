@@ -2,7 +2,8 @@
 
 angular.module('MyApp', [
   'MyApp.account',
-  'MyApp.tweets',  
+  'MyApp.tweets',
+  'MyApp.setup',  
   'ngAnimate', 
   'ui.router',
   'xeditable'])
@@ -13,8 +14,8 @@ angular.module('MyApp', [
 
   $stateProvider
 		.state('home', {
-      url: '/tweets',
-      templateUrl: 'views/tweets/tweet-stream.html'
+      url: '/setup',
+      templateUrl: 'partials/setup/setup.html'
     })
 }])
 

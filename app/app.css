@@ -39,6 +39,13 @@ li {
 .navbar-inverse {
   border-radius: 0; }
 
+.navbar-brand {
+  cursor: pointer; }
+
+.navbar-custom {
+  background: #399ACF;
+  border-radius: 0; }
+
 .loading {
   position: relative;
   height: 100%;
@@ -98,10 +105,49 @@ li {
 .container-fluid .col-md-2 {
   width: 15.666667%; }
 
+.help-block {
+  color: #DE462B; }
+
+hr {
+  border-top: 1px solid #d8dee5; }
+
+.fake-logo {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #c8d1db;
+  border-radius: 10px;
+  padding-top: 20px; }
+  .fake-logo .fui-upload {
+    font-size: 40px;
+    margin-left: 40%;
+    color: #c8d1db; }
+  .fake-logo p {
+    color: #c8d1db;
+    font-size: 15px; }
+
+.company-name p {
+  padding: 5px; }
+.company-name button {
+  margin-top: 10px; }
+
+.setup-title {
+  font-size: 25px; }
+
+.setup-steps {
+  font-size: 17px; }
+  .setup-steps a {
+    color: #399acf; }
+    .setup-steps a:hover {
+      color: #8bc4e3; }
+  .setup-steps li {
+    display: inline-block;
+    margin: 0 40px; }
+
+.select-states {
+  color: #bdc3c7; }
+
 .sidebar-left {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  border-radius: 5px; }
+  padding: 20px; }
   .sidebar-left .current-account a {
     font-size: 14px;
     padding-bottom: 2px;
@@ -110,20 +156,20 @@ li {
 .fake-user {
   width: 100px;
   height: 100px;
-  background: #95a5a6;
+  background: #e7ebef;
   margin: 0 auto; }
 
 .account-menu {
-  background: #95a5a6;
+  background: #e7ebef;
   border-radius: 5px; }
   .account-menu .active {
-    background: #ecf0f1; }
+    background: #d3d6da; }
   .account-menu li {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     transition: all 300ms linear; }
     .account-menu li:hover {
-      background: #ecf0f1; }
+      background: #d3d6da; }
   .account-menu a {
     font-size: 17px;
     display: block;
@@ -132,7 +178,7 @@ li {
 
 /* ============================ ACCOUNT (account settings, billing and emai settings) ========================== */
 .account-settings {
-  border: 1px solid #ccd4d5;
+  border: 1px solid white;
   border-radius: 5px; }
 
 .center-block {
@@ -154,7 +200,7 @@ li {
   margin-top: 20px; }
 
 .acc-title {
-  border-bottom: 1px solid #95a5a6; }
+  border-bottom: 1px solid #e7ebef; }
 
 .current-twitter {
   margin: 10px 0; }
@@ -215,3 +261,8 @@ p.subtitle {
     display: block; }
   .notifications ul input:not(:checked) ~ p:nth-of-type(2) {
     display: block; }
+
+.copyright {
+  padding-top: 10px; }
+  .copyright a {
+    color: #FFF; }

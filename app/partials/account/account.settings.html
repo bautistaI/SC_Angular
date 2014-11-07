@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<!-- ========= Account Status ========= -->
-			<div class="account-status" ng-class="{'hide': !paymentForm}">
+			<div class="account-status" ng-class="{'hide': !signUp}">
 				<p class="acc-title"><strong>Account Status:</strong></p>
 				<img class="status-animation" src="components/trial.gif">
 				<div class="alert alert-warning status-content">
@@ -23,10 +23,11 @@
 				<div>
 					<p class="acc-title">Credit Card Information:</p>
 				</div>
-				<form class="col-md-4 col-xs-12 cc-form" role="form" novalidate name="paymentForm">
+				<form class="col-md-4 col-xs-12 cc-form" ng-submit="submitted=true; submit()" name="paymentForm" novalidate>
 					<div class="form-group">
 						<span class="fui-question-circle"></span> <label for="ccnumber">Credit Card Number:</label>
-						<input type="text" class="form-control" id="" placeholder="1212 1212 1212 1212">
+						<input type="text" class="form-control" ng-model="creditCard" name="cardnumber" placeholder="1212 1212 1212 1212" required>
+						<p class="help-block" ng-show="paymentForm.$submitted && paymentForm.cardnumber.$error.required">Enter a credit card number</p>
 					</div>
 					<div class="form-group">
 						<span class="fui-question-circle"></span> <label for="ccnumber">CVC:</label>
@@ -58,8 +59,8 @@
 							<option value="">2017</option>
 						</select>
 					</div>
-					<button class="btn btn-default btn-wide" ng-click="paymentForm = ! paymentForm">Cancel</button>
-		  		<button class="btn btn-primary btn-wide" ng-click="submit()" type="submit">Submit</button>
+					<button class="btn btn-default btn-wide" ng-click="cancel()">Cancel</button>
+		  		<button class="btn btn-primary btn-wide" type="submit">Submit</button>
 				</form>
 			</div>
 			<!-- ======= @end SignUp Add Credit Card Info -->
