@@ -2,5 +2,3 @@ when crating a new js file follow this:
 
 - add the file to your index.html
 - add the dependency to the module in app.js
-
-change added by israel
