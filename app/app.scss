@@ -74,6 +74,11 @@ li{
 .add-space-right{
   margin-right: 10px;
 }
+
+// --- FIXME!  Needs media queries
+.well{
+  padding: 15%;
+}
 /* --- Animation --- */
 // main container ==============
 .animate-view-container { position:relative; min-height: 100%; }

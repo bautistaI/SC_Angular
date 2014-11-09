@@ -68,6 +68,9 @@ li {
 .add-space-right {
   margin-right: 10px; }
 
+.well {
+  padding: 15%; }
+
 /* --- Animation --- */
 .animate-view-container {
   position: relative;
