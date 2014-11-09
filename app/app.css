@@ -146,8 +146,8 @@ hr {
     display: inline-block;
     margin: 0 40px; }
 
-.select-states {
-  color: #bdc3c7; }
+.details-form option.select-states {
+  color: #bdc3c7 !important; }
 
 .sidebar-left {
   padding: 20px; }

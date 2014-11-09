@@ -1,76 +1,80 @@
 <div class="container-fluid">
 	<div class="row padded">
 		<div class="content">
-  		<div class="row">
-
-  			<form ng-submit="submitted=true; step1()" name="detailsForm" novalidate>
-  				<!-- ==== Company and Twitter Authorize === -->
-  				<div class="col-md-12 form-group">
-  					<div class="fake-logo col-md-3">
+	  		<div class="row">
+	  			<form class="col-md-12 twitter-form" name="twitterForm" novalidate>
+	  				<!-- ==== Company and Twitter Authorize === -->
+	  				<div class="form-group">
+	  					<div class="fake-logo col-md-3">
 							<span class="fui-upload"></span>
 							<p class="text-uppercase text-center">
 								drag and drop<br>or click to upload<br>your logo
 								<!-- https://www.youtube.com/watch?v=Q-C-BmTJDA4 -->
 							</p>
-						</div>
-						<div class="company-name col-md-7">
-							<label for="company-name">Enter Your Company Name</label>
-  						<input type="text" class="form-control" placeholder="John Doe Coffee Shop" name="companyname" required>
-  						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.companyname.$error.required">Enter your company name</p>
-  						<button class="btn btn-info btn-lg"><span class="fui-twitter"></span> Authorize Your Twitter Account</button>
-						</div>
-  				</div>
-  				<!-- ============================= -->
-
-		  				<!-- ==== Contact Information ===== -->
-							<div class="col-md-12 form-group">
-								<hr>
-								<p class="lead">Contact Information</p>
-								<label for="contact-info">Name</label>
-								<input type="text" class="form-control" placeholder="John Doe" name="contactname" required>
-								<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactname.$error.required">Enter your name</p>
-
-								<label for="contact-email">Email Address</label>
-								<input type="email" class="form-control" placeholder="JohnD@johncoffee.com" name="contactemail" required>
-								<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactemail.$error.required">Enter your email</p>
-								<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactemail.$error">Invalid email</p>
-
-								<label for="contact-phone">Phone Number</label>
-								<input type="tel" class="form-control" placeholder="111-111-1111" name="contactphone" required>
-
 							</div>
-							<!-- ============================= -->
+							<div class="company-name col-md-7 form-group">
+							<label for="company-name">Enter Your Company Name</label>
+	  						<input type="text" class="form-control" ng-model="companyName" name="companyname" placeholder="John Doe Coffee Shop"  required>
+	  						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.companyname.$error.required">Enter your company name</p>		
+	  						<button class="btn btn-info btn-lg"><span class="fui-twitter"></span> Authorize Your Twitter Account</button>
+						</div>
+	  				</div>
+	  			</form>	
+	  				<!-- ============================= -->
+				
+				<form class="col-md-12 details-form" ng-submit="submitted=true; detailsForm()" name="detailsForm" novalidate>
+	  				<!-- ==== Contact Information ===== -->
+					<div class="form-group col-md-12">
+						<hr>
+						<p class="lead">Contact Information</p>
+						<label for="contact-info">Name</label>
+						<input type="text" class="form-control" ng-model="contactName" placeholder="John Doe" name="contactname" required>
+						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactname.$error.required">Enter your name</p>
 
-									<!-- ==== Business Location ===== -->
-									<div class="col-md-12 form-group">
-										<hr>
-										<p class="lead">Business Location</p>
-										<p>This information is only to help find Tweets near your business</p>
-											<div class="col-md-5">
-												<input type="text" class="form-control" placeholder="i.e. Business Address" name="business-address" required>
-											</div>
-											<div class="col-md-4">
-												<input type="text" class="form-control" placeholder="City" name="business-city" required>
-											</div>
-											<div class="col-md-3">
-												<select class="select-states form-control" name="business-state" ng-model="blah" ng-options="state.name for state in states">
-													<option value="" disabled selected>State</option>
-												</select>
-											</div>
-											
-										</div>
-									</div>
-									<!-- ============================= -->
+						<label for="contact-email">Email Address</label>
+						<input type="email" class="form-control" ng-model="contactEmail" placeholder="JohnD@johncoffee.com" name="contactemail" required>
+						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactemail.$error.required">Enter your email</p>
+						<!-- FIXME!  is not validating proper email format -->
+						<p class="help-block" ng-show="detailsForm.contactemail.$error.email">Invalid email</p>
 
-											<!-- ===== Next Step ===== -->
-											<div class="col-md-12 form-group">
-												<hr>
-												<button type="submit" class="btn btn-info btn-lg pull-right">Next Step</button>
-											</div>
-											<!-- ============================= -->						
-  			</form>
+						<label for="contact-phone">Phone Number</label>
+						<input type="text" class="form-control" ng-model="contactPhone" placeholder="111-111-1111" name="contactphone" required>
+						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactphone.$error.required">Enter your phone number</p>
+					</div>
+					<!-- ============================= -->
+
+					<!-- ==== Business Location ===== -->
+					<div class="form-group col-md-12">
+						<hr>
+						<p class="lead">Business Location</p>
+						<p>This information is only to help find Tweets near your business</p>
+						<div class="col-md-5">
+							<input type="text" class="form-control" ng-model="businessAddress" placeholder="i.e. Business Address" name="businessAddress" required>
+							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businessAddress.$error.required">Enter your business address</p>
+						</div>
+						<div class="col-md-4">
+							<input type="text" class="form-control" ng-model="businessCity" placeholder="City" name="businessCity" required>
+							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businesscity.$error.required">Enter your business city</p>
+						</div>
+						<div class="col-md-3">
+							<select class="form-control" name="businessState" ng-model="businessState" ng-options="state.name for state in states" required>
+								<option value="" disabled selected>State</option>
+							</select>
+							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businessState.$error.required">Enter your State</p>
+						</div>
+					</div>
+				
+					<!-- ============================= -->
+
+					<!-- ===== Next Step ===== -->
+					<div class="form-group col-md-12">
+						<hr>
+						<button type="submit" class="btn btn-info btn-lg pull-right" ng-disabled="detailsForm.$invalid">Next Step</button>
+					</div>
+					<!-- ============================= -->						
+	  			</form>
 				<!-- ======= @end form ====================== -->
-  		</div>
+	  		</div>
 		</div>
 	</div>
 </div>
