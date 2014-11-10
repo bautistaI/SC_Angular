@@ -16,13 +16,13 @@
 							<label for="company-name">Enter Your Company Name <span class="glyphicon glyphicon-asterisk required"></label>
 							<input type="text" class="form-control" ng-model="companyName" name="companyname" placeholder="John Doe Coffee Shop"  required>
 							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.companyname.$error.required">Enter your company name</p>   
-							<button class="btn btn-info btn-lg" ng-show="!isHidden" ng-click="isHidden=!isHidden"><span class="fui-twitter"></span> Authorize Your Twitter Account</button>
+							<button class="btn btn-info btn-lg authorize-twitter-animation" ng-show="!toggle" ng-click="toggle=!toggle"><span class="fui-twitter"></span> Authorize Your Twitter Account</button>
 
 							<!-- Current Twitter Account -->
-							<div class="current-twitter-user animate-view-container" ng-show="isHidden">
+							<div class="current-twitter-user current-twitter-animation" ng-show="toggle">
 								<img class="img-circle col-md-3 padded" src="http://lorempixel.com/50/50/people">
 								<small>@RandomUser</small><br>
-								<a href="" ng-click="isHidden =!isHidden">Change Twitter Account</a>
+								<a href="" ng-click="toggle=!toggle">Change Twitter Account</a>
 							</div>
 							<!-- ==@end current twitter account ===================== -->
 						</div>

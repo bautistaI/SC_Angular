@@ -135,11 +135,33 @@ span.glyphicon.glyphicon-asterisk.required {
     color: #c8d1db;
     font-size: 15px; }
 
+.authorize-twitter-animation.ng-hide-add,
+.authorize-twitter-animation.ng-hide-remove {
+  -webkit-transition: 0 linear all;
+  transition: 0 linear all;
+  /* remember to add this */
+  display: block !important;
+  opacity: 1; }
+
+.authorize-twitter-animation.ng-hide {
+  opacity: 0; }
+
 .current-twitter-user {
   margin-top: 20px; }
   .current-twitter-user a {
     border-bottom: 1px solid;
     padding-bottom: 4px; }
+
+.current-twitter-animation.ng-hide-add,
+.current-twitter-animation.ng-hide-remove {
+  -webkit-transition: 300ms linear all;
+  transition: 300ms linear all;
+  /* remember to add this */
+  display: block !important;
+  opacity: 1; }
+
+.current-twitter-animation.ng-hide {
+  opacity: 0; }
 
 .company-name p {
   padding: 5px; }

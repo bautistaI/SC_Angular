@@ -154,6 +154,22 @@ hr{
     font-size: 15px;
   }
 }
+// ===== Animation for Authorize twitter user =====
+.authorize-twitter-animation.ng-hide-add,
+.authorize-twitter-animation.ng-hide-remove {
+  -webkit-transition: 0 linear all;
+  transition: 0 linear all;
+
+  /* remember to add this */
+  display:block!important;
+  opacity:1;
+}
+.authorize-twitter-animation.ng-hide {
+  opacity:0;
+}
+// ==============================================
+
+// =========== Current Twitter User =============
 .current-twitter-user{
   margin-top: 20px;
   a{
@@ -161,6 +177,21 @@ hr{
     padding-bottom: 4px;
   }
 }
+// ===== Animation for current twitter user =====
+.current-twitter-animation.ng-hide-add,
+.current-twitter-animation.ng-hide-remove {
+  -webkit-transition: 300ms linear all;
+  transition: 300ms linear all;
+
+  /* remember to add this */
+  display:block!important;
+  opacity:1;
+}
+.current-twitter-animation.ng-hide {
+  opacity:0;
+}
+// ==============================================
+
 .company-name{
   p{
     padding: 5px;
