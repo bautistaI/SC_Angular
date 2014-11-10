@@ -11,14 +11,11 @@
     <title>SocialCentiv</title>
 </head>
 
-
-
-
-<body ng-cloak class="ng-cloak" ng-class="{loading: isLoading}">
-
+<!-- FIXME!  loding is not working  -->
+<body ng-cloak class="ng-cloak">
+{{loading}}
 	<!-- Global navigation -->
 	<nav class="navbar navbar-inverse navbar-custom navbar-embossed" role="navigation" ng-include=" 'partials/navigation/nav.html' "></nav>
-
 
 	<!-- Main View -->
 	<div class="animate-view-container">
@@ -45,6 +42,7 @@
 <script src="bower_components/flat-ui/dist/js/flat-ui.min.js"></script>
 <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script> -->
 <script src="components/messenger/js/messenger.min.js"></script>
 <script src="components/messenger/js/messenger.js"></script>
 <script src="app.js"></script>

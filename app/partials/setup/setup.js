@@ -97,5 +97,5 @@ angular.module('MyApp.setup', ['ui.router'])
 		    { name: 'WISCONSIN', abbreviation: 'WI'},
 		    { name: 'WYOMING', abbreviation: 'WY' }
 			]
-
 }])
+

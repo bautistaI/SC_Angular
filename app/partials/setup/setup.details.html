@@ -1,53 +1,62 @@
 <div class="container-fluid">
 	<div class="row padded">
 		<div class="content">
-	  		<div class="row">
-	  			<form class="col-md-12 twitter-form" name="twitterForm" novalidate>
-	  				<!-- ==== Company and Twitter Authorize === -->
-	  				<div class="form-group">
-	  					<div class="fake-logo col-md-3">
+			<div class="row">
+				<form class="col-md-12 twitter-form" name="twitterForm" novalidate>
+					<!-- ==== Company and Twitter Authorize === -->
+					<div class="form-group">
+						<div class="fake-logo col-md-3">
 							<span class="fui-upload"></span>
 							<p class="text-uppercase text-center">
 								drag and drop<br>or click to upload<br>your logo
 								<!-- https://www.youtube.com/watch?v=Q-C-BmTJDA4 -->
 							</p>
-							</div>
-							<div class="company-name col-md-7 form-group">
-							<label for="company-name">Enter Your Company Name</label>
-	  						<input type="text" class="form-control" ng-model="companyName" name="companyname" placeholder="John Doe Coffee Shop"  required>
-	  						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.companyname.$error.required">Enter your company name</p>		
-	  						<button class="btn btn-info btn-lg"><span class="fui-twitter"></span> Authorize Your Twitter Account</button>
 						</div>
-	  				</div>
-	  			</form>	
-	  				<!-- ============================= -->
-				
+						<div class="company-name col-md-7 form-group">
+							<label for="company-name">Enter Your Company Name <span class="glyphicon glyphicon-asterisk required"></label>
+							<input type="text" class="form-control" ng-model="companyName" name="companyname" placeholder="John Doe Coffee Shop"  required>
+							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.companyname.$error.required">Enter your company name</p>   
+							<button class="btn btn-info btn-lg" ng-show="!isHidden" ng-click="isHidden=!isHidden"><span class="fui-twitter"></span> Authorize Your Twitter Account</button>
+
+							<!-- Current Twitter Account -->
+							<div class="current-twitter-user animate-view-container" ng-show="isHidden">
+								<img class="img-circle col-md-3 padded" src="http://lorempixel.com/50/50/people">
+								<small>@RandomUser</small><br>
+								<a href="" ng-click="isHidden =!isHidden">Change Twitter Account</a>
+							</div>
+							<!-- ==@end current twitter account ===================== -->
+						</div>
+					</div>
+				</form> 
+				<!-- ===@end twitter form ========================== -->
+
+				<!-- ====== Account Details Form ============================================ -->
 				<form class="col-md-12 details-form" ng-submit="submitted=true; detailsForm()" name="detailsForm" novalidate>
-	  				<!-- ==== Contact Information ===== -->
+					<!-- ======== Contact Information ===== -->
 					<div class="form-group col-md-12">
 						<hr>
 						<p class="lead">Contact Information</p>
-						<label for="contact-info">Name</label>
+						<label for="contact-info">Name <span class="glyphicon glyphicon-asterisk required"></label>
 						<input type="text" class="form-control" ng-model="contactName" placeholder="John Doe" name="contactname" required>
 						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactname.$error.required">Enter your name</p>
 
-						<label for="contact-email">Email Address</label>
+						<label for="contact-email">Email Address <span class="glyphicon glyphicon-asterisk required"></label></label>
 						<input type="email" class="form-control" ng-model="contactEmail" placeholder="JohnD@johncoffee.com" name="contactemail" required>
 						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactemail.$error.required">Enter your email</p>
 						<!-- FIXME!  is not validating proper email format -->
 						<p class="help-block" ng-show="detailsForm.contactemail.$error.email">Invalid email</p>
 
-						<label for="contact-phone">Phone Number</label>
+						<label for="contact-phone">Phone Number <span class="glyphicon glyphicon-asterisk required"></label></label>
 						<input type="text" class="form-control" ng-model="contactPhone" placeholder="111-111-1111" name="contactphone" required>
 						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.contactphone.$error.required">Enter your phone number</p>
 					</div>
-					<!-- ============================= -->
+					<!-- =====@end contact information ======================== -->
 
-					<!-- ==== Business Location ===== -->
+					<!-- ======== Business Location ============= -->
 					<div class="form-group col-md-12">
 						<hr>
 						<p class="lead">Business Location</p>
-						<p>This information is only to help find Tweets near your business</p>
+						<p>This information is only to help find Tweets near your business <span class="glyphicon glyphicon-asterisk required"></label></p>
 						<div class="col-md-5">
 							<input type="text" class="form-control" ng-model="businessAddress" placeholder="i.e. Business Address" name="businessAddress" required>
 							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businessAddress.$error.required">Enter your business address</p>
@@ -63,18 +72,17 @@
 							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businessState.$error.required">Enter your State</p>
 						</div>
 					</div>
-				
-					<!-- ============================= -->
+					<!-- ===@end business location ============= -->
 
 					<!-- ===== Next Step ===== -->
 					<div class="form-group col-md-12">
 						<hr>
 						<button type="submit" class="btn btn-info btn-lg pull-right" ng-disabled="detailsForm.$invalid">Next Step</button>
 					</div>
-					<!-- ============================= -->						
-	  			</form>
-				<!-- ======= @end form ====================== -->
-	  		</div>
+					<!-- ============================= -->            
+				</form>
+				<!-- ======= @end Account Details Form ====================== -->
+			</div>
 		</div>
 	</div>
 </div>

@@ -65,8 +65,8 @@ li{
   right:0;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,0) no-repeat center 50%;
-  background-image: url('components/loading-animation.gif');
+  background: transparent no-repeat center 50%;
+  background-image: url('components/ajax-loader.gif');
 }
 .add-space-left{
   margin-left: 10px;
@@ -122,6 +122,8 @@ $hover-neutral: #D3D6DA;
 }
 $blue: #399ACF;
 
+$pomegranate: #C0392B; 
+
 hr{
   border-top: 1px solid darken($neutral, 5%);
 }
@@ -129,7 +131,13 @@ hr{
 // =============================================================================================
 
 // ======================== Setup ========================
-
+.required{
+  color: $pomegranate;
+  }
+  span.glyphicon.glyphicon-asterisk.required{
+    font-size: 10px;
+    vertical-align: text-top;
+}
 .fake-logo{
   width: 200px;
   height: 200px;
@@ -144,6 +152,13 @@ hr{
   p{
     color: darken($neutral, 10%);
     font-size: 15px;
+  }
+}
+.current-twitter-user{
+  margin-top: 20px;
+  a{
+    border-bottom: 1px solid;
+    padding-bottom: 4px;
   }
 }
 .company-name{
@@ -168,7 +183,7 @@ hr{
     margin: 0 40px;
   }
 }
-.details-form{
+.details-form, .twitter-form{
   option.select-states{
     color: #bdc3c7 !important;
   }

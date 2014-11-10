@@ -59,8 +59,8 @@ li {
   right: 0;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0) no-repeat center 50%;
-  background-image: url("components/loading-animation.gif"); }
+  background: transparent no-repeat center 50%;
+  background-image: url("components/ajax-loader.gif"); }
 
 .add-space-left {
   margin-left: 10px; }
@@ -114,6 +114,13 @@ li {
 hr {
   border-top: 1px solid #d8dee5; }
 
+.required {
+  color: #c0392b; }
+
+span.glyphicon.glyphicon-asterisk.required {
+  font-size: 10px;
+  vertical-align: text-top; }
+
 .fake-logo {
   width: 200px;
   height: 200px;
@@ -127,6 +134,12 @@ hr {
   .fake-logo p {
     color: #c8d1db;
     font-size: 15px; }
+
+.current-twitter-user {
+  margin-top: 20px; }
+  .current-twitter-user a {
+    border-bottom: 1px solid;
+    padding-bottom: 4px; }
 
 .company-name p {
   padding: 5px; }
@@ -146,7 +159,7 @@ hr {
     display: inline-block;
     margin: 0 40px; }
 
-.details-form option.select-states {
+.details-form option.select-states, .twitter-form option.select-states {
   color: #bdc3c7 !important; }
 
 .sidebar-left {
