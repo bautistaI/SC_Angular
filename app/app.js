@@ -6,7 +6,11 @@ angular.module('MyApp', [
   'MyApp.setup',  
   'ngAnimate', 
   'ui.router',
-  'xeditable'])
+  'xeditable',
+  'google.places'])
+
+// add google maps dependency
+// 'google-maps'.ns(),
 
 .config(['$stateProvider', '$urlRouterProvider', 
   function($stateProvider, $urlRouterProvider){

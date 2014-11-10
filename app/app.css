@@ -184,6 +184,12 @@ span.glyphicon.glyphicon-asterisk.required {
 .details-form option.select-states, .twitter-form option.select-states {
   color: #bdc3c7 !important; }
 
+.business-location {
+  position: relative; }
+
+.pac-container {
+  top: 1025px !important; }
+
 .sidebar-left {
   padding: 20px; }
   .sidebar-left .current-account a {

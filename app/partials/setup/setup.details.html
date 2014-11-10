@@ -53,26 +53,29 @@
 					<!-- =====@end contact information ======================== -->
 
 					<!-- ======== Business Location ============= -->
-					<div class="form-group col-md-12">
+					<div class="form-group col-md-12 business-location">
 						<hr>
 						<p class="lead">Business Location</p>
 						<p>This information is only to help find Tweets near your business <span class="glyphicon glyphicon-asterisk required"></label></p>
-						<div class="col-md-5">
-							<input type="text" class="form-control" ng-model="businessAddress" placeholder="i.e. Business Address" name="businessAddress" required>
-							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businessAddress.$error.required">Enter your business address</p>
-						</div>
-						<div class="col-md-4">
-							<input type="text" class="form-control" ng-model="businessCity" placeholder="City" name="businessCity" required>
+						
+						<input type="text" g-places-autocomplete class="form-control" ng-model="businessAddress" placeholder="i.e. Business Address" name="businessAddress" required>
+						<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businessAddress.$error.required">Enter your business address</p>
+
+						<!-- don't needed after using google maps -->
+						<!-- +++++ http://angular-js.in/google-places-autocomplete/ +++++++ -->
+						<!-- <div class="col-md-6">
+							<input type="text" g-places-autocomplete class="form-control" ng-model="businessCity" placeholder="City, State" name="businessCity" required>
 							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businesscity.$error.required">Enter your business city</p>
-						</div>
-						<div class="col-md-3">
+						</div> -->
+						
+						<!-- <div class="col-md-3">
 							<select class="form-control" name="businessState" ng-model="businessState" ng-options="state.name for state in states" required>
 								<option value="" disabled selected>State</option>
 							</select>
 							<p class="help-block" ng-show="detailsForm.$submitted && detailsForm.businessState.$error.required">Enter your State</p>
-						</div>
+						</div> -->
 					</div>
-					<!-- ===@end business location ============= -->
+					<!-- ===@end business location ============= -->	
 
 					<!-- ===== Next Step ===== -->
 					<div class="form-group col-md-12">
