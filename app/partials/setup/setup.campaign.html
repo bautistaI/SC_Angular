@@ -1,6 +1,52 @@
 <div class="container-fluid">
-	<div class="row padded">
-		<h1>What are you trying to do?</h1>
-    <hr>
-	</div>
+    <div class="row padded">
+        <h1 class="text-center">What are you trying to do?</h1>
+        
+        <hr>
+        
+        <div class="goals">
+            <div class="col-md-4">
+              <button href="" class="btn btn-embossed btn-primary" ng-click="toggle=!toggle"><span class="fui-heart"></span> Gain Customers</button>
+              <p class="description">
+              i.e., price reduction, free product, <br> or coupons and vouchers
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <a href="" class="btn btn-embossed btn-primary"><span class="fui-user"></span> Reach Customers</a>
+              <p class="description">
+              i.e., eBooks, guides, or webinars
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <a href="" class="btn btn-embossed btn-primary"><span class="fui-info-circle"></span> Inform Customers</a>
+              <p class="description">
+              i.e., events, demos, or conferences
+              </p>
+            </div>
+        </div>
+
+        <div class="col-md-12 achieve" ng-show="toggle">
+            <h2 class="text-center">How do you want to achieve this?</h2>
+        
+            <hr>
+
+            <div class="col-md-6">
+                <a href="" class="btn btn-embossed btn-default btn-primary">I want to send people to a website</a>
+            </div>
+            <div class="col-md-6">
+                <a href="" class="btn btn-embossed btn-default btn-primary">I want to create an incentive using SocialCentiv</a>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 back-button goals">
+            <hr>
+            <a href="" ui-sref="setup.details" class="btn btn-default pull-left">Back to Account Details</a>
+        </div>
+        
+
+
+    </div>
 </div>

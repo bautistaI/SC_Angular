@@ -68,6 +68,12 @@ li {
 .add-space-right {
   margin-right: 10px; }
 
+.add-space-bottom {
+  margin-bottom: 20px; }
+
+.add-space-top {
+  margin-top: 20px; }
+
 .well {
   padding: 15%; }
 
@@ -189,6 +195,15 @@ span.glyphicon.glyphicon-asterisk.required {
 
 .pac-container {
   top: 1040px !important; }
+
+.description {
+  font-size: 12px; }
+
+.goals {
+  margin-top: 60px; }
+
+.achieve h2 {
+  font-size: 38px; }
 
 .sidebar-left {
   padding: 20px; }

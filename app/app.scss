@@ -74,6 +74,12 @@ li{
 .add-space-right{
   margin-right: 10px;
 }
+.add-space-bottom{
+  margin-bottom: 20px;
+}
+.add-space-top{
+  margin-top: 20px;
+}
 
 // --- FIXME!  Needs media queries
 .well{
@@ -124,13 +130,21 @@ $blue: #399ACF;
 
 $pomegranate: #C0392B; 
 
+$carrot: #E67E22;
+
+$concrete: #95A5A6;
+
+$asbestos: #7F8C8D;
+
+$asphalt: #34495E;
+
 hr{
   border-top: 1px solid darken($neutral, 5%);
 }
 
 // =============================================================================================
 
-// ======================== Setup ========================
+// ======================== SETUP ========================
 .required{
   color: $pomegranate;
   }
@@ -190,8 +204,9 @@ hr{
 .current-twitter-animation.ng-hide {
   opacity:0;
 }
-// ==============================================
 
+
+// ============== ACCOUNT DETAILS  ================================
 .company-name{
   p{
     padding: 5px;
@@ -226,6 +241,20 @@ hr{
 // google places search results
 .pac-container{
   top: 1040px!important;
+}
+
+
+// ============ CAMPAIGN ====================
+.description{
+  font-size: 12px;
+}
+.goals{
+  margin-top: 60px;
+}
+.achieve{
+  h2{
+    font-size: 38px;
+  }
 }
 
 
