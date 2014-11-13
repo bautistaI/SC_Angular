@@ -16,7 +16,12 @@ angular.module('MyApp.setup', ['ui.router'])
 		.state('setup.campaign', {
 			url: '/campaign',
 			templateUrl: 'partials/setup/setup.campaign.html',
-			controller: 'SetupCtrl'
+			controller: 'CampaignCtrl'
+		})
+		.state('setup.urlexternal', {
+			url: 'setup/campaign/urlexternal',
+			templateUrl: 'partials/setup/setup.urlexternal.html',
+			controller: 'CampaignCtrl'
 		})
 		.state('setup.incentive', {
 			url: '/incentive',
@@ -97,8 +102,11 @@ angular.module('MyApp.setup', ['ui.router'])
 		//     { name: 'WISCONSIN', abbreviation: 'WI'},
 		//     { name: 'WYOMING', abbreviation: 'WY' }
 		// 	]
-
-		
-
+}])
+.controller('CampaignCtrl', ['$scope', '$stateParams', 
+	function($scope, $stateParams){
+		$(function () {
+  		$('[data-toggle="tooltip"]').tooltip()
+		})
 }])
 

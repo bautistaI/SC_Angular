@@ -238,10 +238,12 @@ hr{
 .business-location{
   position: relative;
 }
-// google places search results
+
+ // google places search results
 .pac-container{
   top: 1040px!important;
 }
+
 
 
 // ============ CAMPAIGN ====================
@@ -256,6 +258,35 @@ hr{
     font-size: 38px;
   }
 }
+
+// ========== CAMPAIGN EXTERNAL URL =================\
+span.info{
+  cursor: pointer;
+}
+.title{
+  font-size: 28px;
+}
+.campaign-name{
+  input{
+    width: 90% !important;
+  }
+}
+.promotion-url{
+  input{
+    width: 100% !important;
+  }
+}
+.campaign-demographics{
+  input.address-on-file{
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+
 
 
 // ==================== @end setup  ======================

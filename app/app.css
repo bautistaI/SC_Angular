@@ -205,6 +205,21 @@ span.glyphicon.glyphicon-asterisk.required {
 .achieve h2 {
   font-size: 38px; }
 
+span.info {
+  cursor: pointer; }
+
+.title {
+  font-size: 28px; }
+
+.campaign-name input {
+  width: 90% !important; }
+
+.promotion-url input {
+  width: 100% !important; }
+
+.campaign-demographics input.address-on-file {
+  width: 100% !important; }
+
 .sidebar-left {
   padding: 20px; }
   .sidebar-left .current-account a {
