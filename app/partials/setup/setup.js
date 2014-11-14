@@ -19,7 +19,7 @@ angular.module('MyApp.setup', ['ui.router'])
 			controller: 'CampaignCtrl'
 		})
 		.state('setup.urlexternal', {
-			url: 'setup/campaign/urlexternal',
+			url: '/campaign/urlexternal',
 			templateUrl: 'partials/setup/setup.urlexternal.html',
 			controller: 'CampaignCtrl'
 		})

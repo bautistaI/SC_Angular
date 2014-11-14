@@ -4,112 +4,139 @@
 
 			<!-- CAMPAIGN NAME FORM -->
 			<form name="campaignName" novalidate class="form-inline">
-				<div class="col-md-12 col-xs-12 form-group campaign-name">
-					<h1 class="title">Campaign Name</h1>
-					<input type="text" class="form-control" ng-model="nameCampaign" name="campaignname" placeholder="Buy One Get One Free" required>
-					<button type="submit" class="btn btn-embossed btn-primary">Save</button>
-					<p class="help-block" ng-show="campaignName.$submitted && campaignName.campaignname.$error.required">Your campaign name is required</p>   
-				</div>
+					<div class="col-md-12 col-xs-12 form-group campaign-name">
+						<p class="title">Campaign Name</p>
+						<input type="text" class="form-control" ng-model="nameCampaign" name="campaignname" placeholder="Buy One Get One Free" required>
+						<!-- <button type="submit" class="btn btn-embossed btn-primary">Save</button>
+						<p class="help-block" ng-show="campaignName.$submitted && campaignName.campaignname.$error.required">Your campaign name is required</p>    -->
+					</div>
 
-				<!-- PROMOTION URL -->
-				<div class="col-md-12 -col-xs-12 form-group promotion-url">
-					<hr>
-					<p class="title">Promotion URL:</p>
-					<input type="text" class="form-control" name="externalUrl" placeholder="http://">
-					<p>Enter or copy and paste the link to the site you want to send your customers</p>
-				</div>
+					<!-- PROMOTION URL -->
+					<div class="col-md-12 -col-xs-12 form-group promotion-url">
+						<hr>
+						<p class="title">Promotion URL:</p>
+						<input type="text" class="form-control" name="externalUrl" placeholder="http://">
+						<p>Enter or copy and paste the link to the site you want to send your customers</p>
+					</div>
 
-				<!-- CAMPAIGN DEMOGRAPHICS -->
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
-					<hr>
-					<p class="title">Campaign Demographics</p>
+					<!-- CAMPAIGN DEMOGRAPHICS -->
+					<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
+						<hr>
+						<p class="title">Campaign Demographics</p>
 
-					<div class="col-md-3">
-						<p>Language <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="tooltip"></span></p>
+						<div class="col-md-3">
+							<p>Language <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="What language does your audience speaks?"></span></p>
+						</div>
+						<div class="col-md-3">
+							<label>
+						      <input type="radio"  name="language" checked> English
+						    </label>
+						</div>
+						<div class="col-md-3">
+							<label>
+						      <input type="radio" name="language"> Español
+						    </label>
+						</div>
+						<div class="col-md-3">
+							<label>
+						      <input type="radio" name="language"> Both
+						    </label>
+						</div>
 					</div>
-					<div class="col-md-3">
-						<label>
-					      <input type="radio"  name="language" checked> English
-					    </label>
+					<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
+						<div class="col-md-3">
+							<p>Audience <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="Who is your target audience?"></span></p>
+						</div>
+						<div class="col-md-3">
+							<label>
+						      <input type="radio" name="audience"> Individuals
+						    </label>
+						</div>
+						<div class="col-md-3">
+							<label>
+						      <input type="radio" name="audience"> Businesses
+						    </label>
+						</div>
+						<div class="col-md-3">
+							<label>
+						      <input type="radio" name="audience" checked> Both
+						    </label>
+						</div>
 					</div>
-					<div class="col-md-3">
-						<label>
-					      <input type="radio" name="language"> Español
-					    </label>
-					</div>
-					<div class="col-md-3">
-						<label>
-					      <input type="radio" name="language"> Both
-					    </label>
-					</div>
-				</div>
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
-					<div class="col-md-3">
-						<p>Audience <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="tooltip"></span></p>
-					</div>
-					<div class="col-md-3">
-						<label>
-					      <input type="radio" name="audience"> Individuals
-					    </label>
-					</div>
-					<div class="col-md-3">
-						<label>
-					      <input type="radio" name="audience"> Businesses
-					    </label>
-					</div>
-					<div class="col-md-3">
-						<label>
-					      <input type="radio" name="audience" checked> Both
-					    </label>
-					</div>
-				</div>
 
-				<!-- LOCATION -->
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
-					<p class="title">Location</p>
-					<div class="col-md-4">
+					<!-- LOCATION -->
+					<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
+						<p class="title">Location</p>
+						<div class="col-md-4">
+							<label>
+								<input type="radio" name="current-address"> Use my business address
+							</label>
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control address-on-file" name="addressOnfile" placeholder="2323 Field Street, suite#34 Dallas, Tx, 75098">
+						</div>
+						<div class="col-md-2">
+							<select class="form-control" name="radius" required>
+								<option value="" disabled selected>Radius</option>
+								<option value="0">5 Mile Radius</option>
+								<option value="1">10 Mile Radius</option>
+								<option value="2">20 Mile Radius</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-12 -col-xs-12 form-group campaign-demographics add-space-top">
+						<div class="col-md-4">
+							<label>
+								<input type="radio" name="current-address"> Use a different address
+							</label>
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control address-on-file" name="addressOnfile" placeholder="business address">
+						</div>
+						<div class="col-md-2">
+							<select class="form-control" name="radius" required>
+								<option value="" disabled selected>Radius</option>
+								<option value="0">5 Mile Radius</option>
+								<option value="1">10 Mile Radius</option>
+								<option value="2">20 Mile Radius</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col-md-12 col-xs-12 form-group cities add-space-top">
+						<p class="lead text-center">- or -</p>
 						<label>
-							<input type="checkbox" name="current-address"> Use my Address on file
+							<input type="checkbox" name="select-cities" ng-click="toggle=!toggle"> Select specific geographic areas like countries and cities.
 						</label>
-					</div>
-					<div class="col-md-6">
-						<input type="text" class="form-control address-on-file" name="addressOnfile" placeholder="2323 Field Street, suite#34 Dallas, Tx, 75098">
-					</div>
-					<div class="col-md-2">
-						<select class="form-control" name="radius" required>
-							<option value="" disabled selected>Radius</option>
-							<option value="0">5 Mile Radius</option>
-							<option value="1">10 Mile Radius</option>
-							<option value="2">20 Mile Radius</option>
-						</select>
-					</div>
-				</div>
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics add-space-top">
-					<div class="col-md-4">
-						<label>
-							<input type="checkbox" name="current-address"> Use another Address on file
-						</label>
-					</div>
-					<div class="col-md-6">
-						<input type="text" class="form-control address-on-file" name="addressOnfile" placeholder="business address">
-					</div>
-					<div class="col-md-2">
-						<select class="form-control" name="radius" required>
-							<option value="" disabled selected>Radius</option>
-							<option value="0">5 Mile Radius</option>
-							<option value="1">10 Mile Radius</option>
-							<option value="2">20 Mile Radius</option>
-						</select>
-					</div>
-				</div>
+						<div ng-show="toggle">
+							<button class="btn btn-primary" ng-click="mexico=!mexico" ng-disabled="usa">United States</button>
+							<button class="btn btn-primary" ng-click="usa=!usa"ng-disabled="mexico">Mexico</button>
 
-				<p class="lead text-center">- or -</p>
-
-				<div class="col-md-12 -colxs-12 form-group cities add-space-top">
-					<label>
-						<input type="checkbox" name="select-cities"> THIS NEED TO BE BETTER CHECKBOX FIRTS OR BUTTONS?
-					</label>
-				</div>
+							<div class="add-space-top">
+								<div class="col-md-7 cities no-padding-sides">
+									<input type="radio" name="city">
+									<input type="text" class="form-control city-input" name="city" placeholder="City">
+									<select class="form-control" name="radius" required>
+										<option value="" disabled selected>Radius</option>
+										<option value="0">5 Mile Radius</option>
+										<option value="1">10 Mile Radius</option>
+										<option value="2">20 Mile Radius</option>
+									</select>
+								</div>
+								
+								<div class="col-md-3 switch pull-left">
+								    <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+								    <label for="week" class="switch-label switch-label-off">Miles</label>
+								    <input type="radio" class="switch-input" name="view" value="month" id="month">
+								    <label for="month" class="switch-label switch-label-on">Kilometers</label>
+								    <span class="switch-selection"></span>
+								</div>
+								<div class="col-md-2 add-cities">
+									<button class="btn btn-default">Add City</button>
+								</div>
+							</div>
+						</div>
+					</div>
 			</form>
 		</div>
 	</div>
