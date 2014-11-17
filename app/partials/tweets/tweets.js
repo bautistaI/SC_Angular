@@ -5,7 +5,7 @@ angular.module('MyApp.tweets', ['ui.router'])
   $stateProvider
   .state('tweets', {
     url: '/tweets',
-    templateUrl: 'views/tweets/tweet-stream.html',
+    templateUrl: 'partials/tweets/tweet-stream.html',
     controller: 'TweetsCtrl'
   });
 }])

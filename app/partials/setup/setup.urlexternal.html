@@ -2,141 +2,149 @@
 	<div class="row padded">
 		<div class="content">
 
-			<!-- CAMPAIGN NAME FORM -->
-			<form name="campaignName" novalidate class="form-inline">
-					<div class="col-md-12 col-xs-12 form-group campaign-name">
-						<p class="title">Campaign Name</p>
-						<input type="text" class="form-control" ng-model="nameCampaign" name="campaignname" placeholder="Buy One Get One Free" required>
-						<!-- <button type="submit" class="btn btn-embossed btn-primary">Save</button>
-						<p class="help-block" ng-show="campaignName.$submitted && campaignName.campaignname.$error.required">Your campaign name is required</p>    -->
-					</div>
+<!-- ========================= CAMPAIGN NAME FORM ================================================   -->
 
-					<!-- PROMOTION URL -->
-					<div class="col-md-12 -col-xs-12 form-group promotion-url">
-						<hr>
-						<p class="title">Promotion URL:</p>
-						<input type="text" class="form-control" name="externalUrl" placeholder="http://">
-						<p>Enter or copy and paste the link to the site you want to send your customers</p>
-					</div>
+			<form name="externalUrlform" novalidate class="form-inline">
+				<!-- +++ Campaign Name +++ -->
+				<div class="col-md-12 col-xs-12 form-group campaign-name" ng-include=" 'partials/setup/campaign/campaign_name.html' ">
+				</div>
 
-					<!-- CAMPAIGN DEMOGRAPHICS -->
-					<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
-						<hr>
-						<p class="title">Campaign Demographics</p>
+				<!-- +++ Promotion URL +++ -->
+				<div class="col-md-12 -col-xs-12 form-group promotion-url" ng-include=" 'partials/setup/campaign/promotionurl.html' ">
+				</div>
 
-						<div class="col-md-3">
-							<p>Language <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="What language does your audience speaks?"></span></p>
-						</div>
-						<div class="col-md-3">
-							<label>
-						      <input type="radio"  name="language" checked> English
-						    </label>
-						</div>
-						<div class="col-md-3">
-							<label>
-						      <input type="radio" name="language"> Español
-						    </label>
-						</div>
-						<div class="col-md-3">
-							<label>
-						      <input type="radio" name="language"> Both
-						    </label>
-						</div>
-					</div>
-					<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
-						<div class="col-md-3">
-							<p>Audience <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="Who is your target audience?"></span></p>
-						</div>
-						<div class="col-md-3">
-							<label>
-						      <input type="radio" name="audience"> Individuals
-						    </label>
-						</div>
-						<div class="col-md-3">
-							<label>
-						      <input type="radio" name="audience"> Businesses
-						    </label>
-						</div>
-						<div class="col-md-3">
-							<label>
-						      <input type="radio" name="audience" checked> Both
-						    </label>
-						</div>
-					</div>
+				<!-- ==== CAMPAIGN DEMOGRAPHICS ===== -->
 
-					<!-- LOCATION -->
-					<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
-						<p class="title">Location</p>
-						<div class="col-md-4">
-							<label>
-								<input type="radio" name="current-address"> Use my business address
-							</label>
-						</div>
-						<div class="col-md-6">
-							<input type="text" class="form-control address-on-file" name="addressOnfile" placeholder="2323 Field Street, suite#34 Dallas, Tx, 75098">
-						</div>
-						<div class="col-md-2">
-							<select class="form-control" name="radius" required>
-								<option value="" disabled selected>Radius</option>
-								<option value="0">5 Mile Radius</option>
-								<option value="1">10 Mile Radius</option>
-								<option value="2">20 Mile Radius</option>
-							</select>
-						</div>
-					</div>
-					<div class="col-md-12 -col-xs-12 form-group campaign-demographics add-space-top">
-						<div class="col-md-4">
-							<label>
-								<input type="radio" name="current-address"> Use a different address
-							</label>
-						</div>
-						<div class="col-md-6">
-							<input type="text" class="form-control address-on-file" name="addressOnfile" placeholder="business address">
-						</div>
-						<div class="col-md-2">
-							<select class="form-control" name="radius" required>
-								<option value="" disabled selected>Radius</option>
-								<option value="0">5 Mile Radius</option>
-								<option value="1">10 Mile Radius</option>
-								<option value="2">20 Mile Radius</option>
-							</select>
-						</div>
-					</div>
+				<!-- +++ Language +++ -->
+				<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
+					<hr>
+					<p class="title">Campaign Demographics</p>
 
-					<div class="col-md-12 col-xs-12 form-group cities add-space-top">
-						<p class="lead text-center">- or -</p>
+					<div class="col-md-3">
+						<p>Language <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="What language does your audience speaks?"></span></p>
+					</div>
+					<div class="col-md-3">
 						<label>
-							<input type="checkbox" name="select-cities" ng-click="toggle=!toggle"> Select specific geographic areas like countries and cities.
-						</label>
-						<div ng-show="toggle">
-							<button class="btn btn-primary" ng-click="mexico=!mexico" ng-disabled="usa">United States</button>
-							<button class="btn btn-primary" ng-click="usa=!usa"ng-disabled="mexico">Mexico</button>
+					      <input type="radio"  name="language" checked> English
+					    </label>
+					</div>
+					<div class="col-md-3">
+						<label>
+					      <input type="radio" name="language"> Español
+					    </label>
+					</div>
+					<div class="col-md-3">
+						<label>
+					      <input type="radio" name="language"> Both
+					    </label>
+					</div>	
+				</div>
+				<!-- +++ Audience +++ -->
+				<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
+					<div class="col-md-3">
+						<p>Audience <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="Who is your target audience?"></span></p>
+					</div>
+					<div class="col-md-3">
+						<label>
+					      <input type="radio" name="audience"> Individuals
+					    </label>
+					</div>
+					<div class="col-md-3">
+						<label>
+					      <input type="radio" name="audience"> Businesses
+					    </label>
+					</div>
+					<div class="col-md-3">
+						<label>
+					      <input type="radio" name="audience" checked> Both
+					    </label>
+					</div>
+				</div>
 
-							<div class="add-space-top">
+				<!-- ==== Location ===== -->
+				<div class="col-md-12 -col-xs-12 form-group campaign-demographics" ng-include=" 'partials/setup/campaign/campaign_location.html' ">
+				</div>
+
+				<!-- === Business Address ==== -->
+				<div class="col-md-12 -col-xs-12 form-group campaign-demographics add-space-top" ng-include=" 'partials/setup/campaign/campaign_business_address.html' ">
+				</div>
+
+				<!-- === Countries & Cities ==== -->
+				<div class="col-md-12 col-xs-12 form-group cities add-space-top">
+					<p class="lead text-center">- or -</p>
+					<!-- Select Specific Location -->
+					<label>
+						<input type="radio" name="current-address" ng-click="toggle=!toggle"> Select specific geographic areas like countries and cities.
+					</label>
+					<div ng-show="toggle">
+
+						<!-- USA  &  MEXICO Select Buttons -->
+						<button class="btn btn-info" ng-click="mexico=!mexico" ng-disabled="usa">United States</button>
+						<button class="btn btn-primary" ng-click="usa=!usa"ng-disabled="!mexico" ng-model="mexico">Mexico</button>
+
+						<!-- +++++   Input City - Radius Select ++++++ -->
+						<div class="select-cities">
+							<div class="col-md-12 col-xs-12 add-space-top row">
+
+								<!-- Enter a City Input -->
 								<div class="col-md-7 cities no-padding-sides">
-									<input type="radio" name="city">
-									<input type="text" class="form-control city-input" name="city" placeholder="City">
-									<select class="form-control" name="radius" required>
+									<input type="radio" name="city" checked>
+									<input type="text" name="addcity" class="form-control city-input" ng-model="city" placeholder="City" required>
+									
+									<!-- FIXME! need to be able to add the radius value whenever a new city is added -->
+									<select class="form-control" name="radius" ng-model="blah" ng-options="mile.distance for mile in miles">
 										<option value="" disabled selected>Radius</option>
-										<option value="0">5 Mile Radius</option>
-										<option value="1">10 Mile Radius</option>
-										<option value="2">20 Mile Radius</option>
 									</select>
 								</div>
-								
+
+
+								<!-- Miles & Kilometers switch -->
 								<div class="col-md-3 switch pull-left">
+									<!-- FIXME! need to be able to switch data to kilometers when switched -->
 								    <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
 								    <label for="week" class="switch-label switch-label-off">Miles</label>
+
 								    <input type="radio" class="switch-input" name="view" value="month" id="month">
 								    <label for="month" class="switch-label switch-label-on">Kilometers</label>
 								    <span class="switch-selection"></span>
 								</div>
+
+
+								<!-- Add City - disabled by default -->
 								<div class="col-md-2 add-cities">
-									<button class="btn btn-default">Add City</button>
+									<button class="btn btn-primary" ng-disabled="externalUrlform.$invalid" ng-click="addCity()">Add City</button>
 								</div>
+							</div>
+
+							<!-- Nationwide -->
+							<div class="col-md-12 col-xs-12 nationwide add-space-top">
+								<input type="radio" name="city"> Nationwide
+							</div>
+
+							<!-- Cities List -->
+							<div class="col-md-12 col-xs-12 add-space-top cities-list">
+								<ul class="list-group">
+							    	<a ng-click="removeCity()"><li class="list-group-item col-md-3 fui-cross-circle" ng-repeat="city in cities"> {{city | uppercase}}</li></a>
+								</ul>
+							</div>
+							
+							<!-- Duplicated City Error -->
+							<div ng-show="alert" class="col-md-12 alert alert-warning alert-dismissible add-space-top" role="alert">
+							  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							  <strong>Hey!</strong> You already added that city.
 							</div>
 						</div>
 					</div>
+				</div><!-- @end Countries & Cities  -->
+				<div class="col-md-12 colxs-12 form-group campaign-keywords add-space-top">
+					<hr>
+					<p class="title">Campaign Keywords</p>
+					<p class="bg-info">
+						Keywords and key phrases help find people located near your business who are expressing an intent to purchase.
+						Add keywords and key phrases that are relevant to your business' products and services for best results.
+						<a href=""> See examples</a>
+					</p> 
+				</div>
 			</form>
 		</div>
 	</div>

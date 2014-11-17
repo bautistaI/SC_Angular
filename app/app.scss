@@ -287,7 +287,7 @@ span.info{
 }
 .cities{
   .city-input{
-    width: 60% !important;
+    width: 70% !important;
   }
 }
 // ========  DISTANCE SWITCH ============
@@ -366,6 +366,27 @@ span.info{
 }
 // =========================================================
 
+.cities-list{
+  max-height: 140px;
+  overflow-y: scroll;
+  ul, li{
+    border-radius: 5px;
+    margin: 3px;
+    transition: 300ms linear all;
+    &:hover{
+      background: $neutral;
+    }
+  }
+  a{
+    cursor: pointer;
+  }
+  .fui-cross-circle:hover{
+    color: $pomegranate;
+  }
+}
+.nationwide{
+  padding: 0;
+}
 
 
 

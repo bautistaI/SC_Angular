@@ -225,7 +225,7 @@ span.info {
   width: 100% !important; }
 
 .cities .city-input {
-  width: 60% !important; }
+  width: 70% !important; }
 
 .switch {
   position: relative;
@@ -296,6 +296,23 @@ span.info {
   -moz-transition: left 0.15s ease-out;
   -o-transition: left 0.15s ease-out;
   transition: left 0.15s ease-out; }
+
+.cities-list {
+  max-height: 140px;
+  overflow-y: scroll; }
+  .cities-list ul, .cities-list li {
+    border-radius: 5px;
+    margin: 3px;
+    transition: 300ms linear all; }
+    .cities-list ul:hover, .cities-list li:hover {
+      background: #e7ebef; }
+  .cities-list a {
+    cursor: pointer; }
+  .cities-list .fui-cross-circle:hover {
+    color: #c0392b; }
+
+.nationwide {
+  padding: 0; }
 
 .sidebar-left {
   padding: 20px; }
