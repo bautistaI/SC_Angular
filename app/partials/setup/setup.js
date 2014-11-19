@@ -67,32 +67,95 @@ angular.module('MyApp.setup', ['ui.router'])
 		];
 
 
+		// ====== Location Add City ===================
+
 		$scope.cities = [];
 
 
 		$scope.removeCity = function(index){
 			$scope.cities.splice(index, 1);
 		}
-		
+
 
 		$scope.addCity = function() {
 
 			var found = $scope.cities.reduce(function(previous, i)
 			{
 			
-			$scope.alert = false;
+			$scope.duplicateCity = false;
 
 			if ($scope.city === i) return true;
 			  	return previous;
 			}, false);
 				if (found){
-				$scope.alert = true;
+				$scope.duplicateCity = true;
 			}
 			else{
 				$scope.cities.push($scope.city);
 				$scope.city = '';
-				$scope.alert = false;
+				$scope.duplicateCity = false;
 			}
 	    }
+
+
+
+	    // ======= Campaign Specific Keywords ==============
+
+	    $scope.keywords = [];
+
+	    $scope.removeKeyword = function(index){
+			$scope.keywords.splice(index, 1);
+		}
+
+		$scope.addKeyword = function() {
+
+			var found = $scope.keywords.reduce(function(previous, i)
+			{
+			
+			$scope.duplicateKeyword = false;
+
+			if ($scope.keyword === i) return true;
+			  	return previous;
+			}, false);
+				if (found){
+				$scope.duplicateKeyword = true;
+			}
+			else{
+				$scope.keywords.push($scope.keyword);
+				$scope.keyword = '';
+				$scope.duplicateKeyword = false;
+			}
+	    }
+
+
+	    // ======= Campaign Restricted Keywords ==============
+
+	    $scope.restrictKeywords = [];
+
+	    $scope.removeRestrictKeyword = function(index){
+			$scope.restrictKeywords.splice(index, 1);
+		}
+
+		$scope.addRestrictKeyword = function() {
+
+			var found = $scope.restrictKeywords.reduce(function(previous, i)
+			{
+			
+			$scope.duplicateRestrictKeyword = false;
+
+			if ($scope.restricted === i) return true;
+			  	return previous;
+			}, false);
+				if (found){
+				$scope.duplicateRestrictKeyword = true;
+			}
+			else{
+				$scope.restrictKeywords.push($scope.restricted);
+				$scope.restricted = '';
+				$scope.duplicateRestrictKeyword = false;
+			}
+	    }
+
+
 
 }])

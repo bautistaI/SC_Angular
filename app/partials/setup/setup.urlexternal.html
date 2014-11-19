@@ -10,13 +10,13 @@
 				</div>
 
 				<!-- +++ Promotion URL +++ -->
-				<div class="col-md-12 -col-xs-12 form-group promotion-url" ng-include=" 'partials/setup/campaign/promotionurl.html' ">
+				<div class="col-md-12 col-xs-12 form-group promotion-url" ng-include=" 'partials/setup/campaign/promotionurl.html' ">
 				</div>
 
 				<!-- ==== CAMPAIGN DEMOGRAPHICS ===== -->
 
 				<!-- +++ Language +++ -->
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
+				<div class="col-md-12 col-xs-12 form-group campaign-demographics">
 					<hr>
 					<p class="title">Campaign Demographics</p>
 
@@ -40,7 +40,7 @@
 					</div>	
 				</div>
 				<!-- +++ Audience +++ -->
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics">
+				<div class="col-md-12 col-xs-12 form-group campaign-demographics">
 					<div class="col-md-3">
 						<p>Audience <span class="fui-info-circle info" data-toggle="tooltip" data-placement="top" title="Who is your target audience?"></span></p>
 					</div>
@@ -62,11 +62,11 @@
 				</div>
 
 				<!-- ==== Location ===== -->
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics" ng-include=" 'partials/setup/campaign/campaign_location.html' ">
+				<div class="col-md-12 col-xs-12 form-group campaign-demographics" ng-include=" 'partials/setup/campaign/campaign_location.html' ">
 				</div>
 
 				<!-- === Business Address ==== -->
-				<div class="col-md-12 -col-xs-12 form-group campaign-demographics add-space-top" ng-include=" 'partials/setup/campaign/campaign_business_address.html' ">
+				<div class="col-md-12 col-xs-12 form-group campaign-demographics add-space-top" ng-include=" 'partials/setup/campaign/campaign_business_address.html' ">
 				</div>
 
 				<!-- === Countries & Cities ==== -->
@@ -129,23 +129,26 @@
 							</div>
 							
 							<!-- Duplicated City Error -->
-							<div ng-show="alert" class="col-md-12 alert alert-warning alert-dismissible add-space-top" role="alert">
-							  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-							  <strong>Hey!</strong> You already added that city.
-							</div>
+							<div ng-include=" 'partials/setup/campaign/error_duplicate_city.html' "></div>
 						</div>
 					</div>
 				</div><!-- @end Countries & Cities  -->
-				<div class="col-md-12 colxs-12 form-group campaign-keywords add-space-top">
+			</form>
+
+			
+			<!-- ================ CAMPAIGN KEYWORDS FORM ================= -->
+			<form name="keywordsForm" novalidate class="form-inline">
+				<div class="col-md-12 col-xs-12 form-group campaign-keywords add-space-top">
 					<hr>
 					<p class="title">Campaign Keywords</p>
 					<p class="bg-info">
 						Keywords and key phrases help find people located near your business who are expressing an intent to purchase.
 						Add keywords and key phrases that are relevant to your business' products and services for best results.
 						<a href data-toggle="modal" data-target="#exampleModal">See example</a>
-					</p> 
+					</p>
+					<!--=============== MODAL ======================  -->
 					<!-- FIXME! weird behavior with modal window -->
-			        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+			       <!--  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
 				        <div class="modal-dialog">
 				            <div class="modal-content">
 				              	<div class="modal-header">
@@ -161,7 +164,47 @@
 				              	</div>
 				            </div>
 				        </div>
-			        </div>
+			        </div> -->
+			        <!-- ========@end Modal ====================================== -->
+
+			        <!-- =============  Campaign Specific Keywords =================== -->
+			        <!-- Add a Keyword -->
+			        <p class="title">Campaign-Specific Keywords</p>
+					<input type="text" name="addkeyword" class="form-control keyword-input" ng-model="keyword" placeholder="Enter a keyword or keyword phrase" required>
+
+					<!-- Add a Keyword -->
+					<div class=" col-md-2 col-xs-2 pull-right no-padding-sides">
+						<button class="btn btn-primary" ng-click="addKeyword()">Add Keyword</button>
+					</div>
+					<!-- Campaign-Specific Keywords List -->
+					<div class="add-space-top specific-keywords-list">
+						<ul class="list-group">
+					    	<a><li class="list-group-item col-md-3 fui-cross-circle" ng-repeat="keyword in keywords" ng-click="removeKeyword($index)"> {{keyword | uppercase}}</li></a>
+						</ul>
+					</div>
+					
+					<!-- Duplicated Keyword Error -->
+					<div ng-include=" 'partials/setup/campaign/error_specific_keyword.html' "></div>
+
+					<!-- =============== Campaign Restricted Keywords ================ -->
+			        
+			        <p class="title">Restricted Keywords</p>
+			        <small>Do not show Tweets containing these keywords and key phrases</small>
+					<input type="text" name="addrestrictedKeyword" class="form-control keyword-input" ng-model="restricted" placeholder="Enter a keyword or keyword phrase" required>
+
+					<!-- Add a Restricted Keyword -->
+					<div class=" col-md-2 col-xs-2 pull-right no-padding-sides">
+						<button class="btn btn-primary" ng-click="addRestrictKeyword()">Add Keyword</button>
+					</div>
+					<!-- Campaign-Specific Keywords List -->
+					<div class="add-space-top restricted-keywords-list">
+						<ul class="list-group">
+					    	<a><li class="list-group-item col-md-3 fui-cross-circle" ng-repeat="restricted in restrictKeywords" ng-click="removeRestrictKeyword($index)"> {{restricted | uppercase}}</li></a>
+						</ul>
+					</div>
+					
+					<!-- Duplicated Restricted Keyword Error -->
+					<div ng-include=" 'partials/setup/campaign/error_restricted_keyword.html' "></div>
 				</div>
 			</form>
 		</div>

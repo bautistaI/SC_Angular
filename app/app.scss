@@ -290,7 +290,7 @@ span.info{
     width: 70% !important;
   }
 }
-// ========  DISTANCE SWITCH ============
+// distance swtich
 .switch {
   position: relative;
   margin: 0;
@@ -364,9 +364,9 @@ span.info{
   -o-transition: left 0.15s ease-out;
   transition: left 0.15s ease-out;
 }
-// =========================================================
+// ===============
 
-.cities-list{
+.cities-list, .specific-keywords-list, .restricted-keywords-list{
   max-height: 140px;
   overflow-y: scroll;
   ul, li{
@@ -386,6 +386,12 @@ span.info{
 }
 .nationwide{
   padding: 0;
+}
+
+.campaign-keywords{
+  .keyword-input{
+    width: 80%;
+  }
 }
 
 

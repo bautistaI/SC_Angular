@@ -297,22 +297,25 @@ span.info {
   -o-transition: left 0.15s ease-out;
   transition: left 0.15s ease-out; }
 
-.cities-list {
+.cities-list, .specific-keywords-list, .restricted-keywords-list {
   max-height: 140px;
   overflow-y: scroll; }
-  .cities-list ul, .cities-list li {
+  .cities-list ul, .cities-list li, .specific-keywords-list ul, .specific-keywords-list li, .restricted-keywords-list ul, .restricted-keywords-list li {
     border-radius: 5px;
     margin: 3px;
     transition: 300ms linear all; }
-    .cities-list ul:hover, .cities-list li:hover {
+    .cities-list ul:hover, .cities-list li:hover, .specific-keywords-list ul:hover, .specific-keywords-list li:hover, .restricted-keywords-list ul:hover, .restricted-keywords-list li:hover {
       background: #e7ebef; }
-  .cities-list a {
+  .cities-list a, .specific-keywords-list a, .restricted-keywords-list a {
     cursor: pointer; }
-  .cities-list .fui-cross-circle:hover {
+  .cities-list .fui-cross-circle:hover, .specific-keywords-list .fui-cross-circle:hover, .restricted-keywords-list .fui-cross-circle:hover {
     color: #c0392b; }
 
 .nationwide {
   padding: 0; }
+
+.campaign-keywords .keyword-input {
+  width: 80%; }
 
 .sidebar-left {
   padding: 20px; }

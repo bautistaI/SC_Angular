@@ -6,3 +6,4 @@ when creating a new js file follow this:
 
 === Forms
 - need ng-model on the input to validate!
+- the ng-model name must match the name of the $scope to bind (See add keyword or add city inputs and list scope )
