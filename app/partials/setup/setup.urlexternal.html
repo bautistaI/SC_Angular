@@ -124,7 +124,7 @@
 							<!-- Cities List -->
 							<div class="col-md-12 col-xs-12 add-space-top cities-list">
 								<ul class="list-group">
-							    	<a ng-click="removeCity()"><li class="list-group-item col-md-3 fui-cross-circle" ng-repeat="city in cities"> {{city | uppercase}}</li></a>
+							    	<a><li class="list-group-item col-md-3 fui-cross-circle" ng-repeat="city in cities" ng-click="removeCity($index)"> {{city | uppercase}}</li></a>
 								</ul>
 							</div>
 							
@@ -142,8 +142,26 @@
 					<p class="bg-info">
 						Keywords and key phrases help find people located near your business who are expressing an intent to purchase.
 						Add keywords and key phrases that are relevant to your business' products and services for best results.
-						<a href=""> See examples</a>
+						<a href data-toggle="modal" data-target="#exampleModal">See example</a>
 					</p> 
+					<!-- FIXME! weird behavior with modal window -->
+			        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+				        <div class="modal-dialog">
+				            <div class="modal-content">
+				              	<div class="modal-header">
+				                	<button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+				                	<h4 class="modal-title">Yes or No?</h4>
+				              	</div>
+				              	<div class="modal-body">
+				                	<p>It's your call...</p>
+				              	</div>
+				              	<div class="modal-footer">
+				                	<button type="button" ng-click="close('No')" class="btn btn-default" data-dismiss="modal">No</button>
+				                	<button type="button" ng-click="close('Yes')" class="btn btn-primary" data-dismiss="modal">Yes</button>
+				              	</div>
+				            </div>
+				        </div>
+			        </div>
 				</div>
 			</form>
 		</div>

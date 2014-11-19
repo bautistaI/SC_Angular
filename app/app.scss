@@ -64,7 +64,7 @@ li{
   bottom:0;
   right:0;
   top:0;
-  z-index:1000;
+  z-index: 3000;
   background: transparent no-repeat center 50%;
   background-image: url('components/ajax-loader.gif');
 }
@@ -387,7 +387,6 @@ span.info{
 .nationwide{
   padding: 0;
 }
-
 
 
 // ==================== @end setup  ======================

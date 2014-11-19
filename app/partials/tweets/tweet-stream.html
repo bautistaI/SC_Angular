@@ -1,14 +1,15 @@
 <div class="container-fluid">
 	<div class="row padded">
 		<div class="col-md-2 col-xs-12 sidebar-left pull-left">
-			<div ng-include=" 'views/twitter_account/current-account.html' "></div>
+			<div ng-include=" 'partials/twitter_account/current-account.html' "></div>
 		
 			<!-- ===== Add a Keyword ===== -->
 			<div class="form-group">
 				<p class="acc-title">Promotion Keywords</p>
-				<ul class="keyword-list" ng-repeat="keyword in keywords">
+				<!-- FIXME! this generates an infinite loop -->
+				<!-- <ul class="keyword-list" ng-repeat="keyword in keywords">
         			<li >{{keyword.text}}{{getRandom()}}</li>
-       			</ul>
+       			</ul> -->
 			</div>
 			<form ng-submit="submitted=true; addKeyword()">
 				<div class="form-group">

@@ -1,7 +1,8 @@
 <!doctype html>
 <html ng-app='MyApp'>
 <head>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css">
 	<link rel="stylesheet" href="bower_components/angular-google-places-autocomplete/src/autocomplete.css">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -13,8 +14,8 @@
 </head>
 
 <!-- FIXME!  loding is not working  -->
-<body ng-cloak class="ng-cloak">
-{{loading}}
+<body ng-cloak class="ng-cloak" ng-class="{loading: isLoading}">
+
 	<!-- Global navigation -->
 	<nav class="navbar navbar-inverse navbar-custom navbar-embossed" role="navigation" ng-include=" 'partials/navigation/nav.html' "></nav>
 
@@ -46,6 +47,7 @@
 <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
 <script src='https://maps.googleapis.com/maps/api/js?libraries=places'></script>
 <script src="bower_components/angular-google-places-autocomplete/src/autocomplete.js"></script>
+<script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>  
 <!-- <script src="components/lodash.js"></script> -->
 <!-- <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script> -->
 <!-- <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script> -->

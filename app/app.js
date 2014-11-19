@@ -7,7 +7,8 @@ angular.module('MyApp', [
   'ngAnimate', 
   'ui.router',
   'xeditable',
-  'google.places'])
+  'google.places',
+  'angularModalService'])
 
 // add google maps dependency
 // 'google-maps'.ns(),

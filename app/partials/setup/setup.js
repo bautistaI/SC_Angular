@@ -34,8 +34,8 @@ angular.module('MyApp.setup', ['ui.router'])
 			controller: 'SetupCtrl'
 		})
 }])
-.controller('SetupCtrl', ['$scope', '$stateParams', 
-	function($scope, $stateParams){
+.controller('SetupCtrl', ['$scope', '$stateParams', '$location', 
+	function($scope, $stateParams, $location){
 		
 }])
 .controller('DetailsCtrl', ['$scope', 
@@ -46,8 +46,10 @@ angular.module('MyApp.setup', ['ui.router'])
 	function($scope){
 		
 }])
-.controller('UrlCtrl', ['$scope', 
-	function($scope){
+
+.controller('UrlCtrl', ['$scope', 'ModalService',
+	function($scope, ModalService){
+
 		$(function(){
   			$('[data-toggle="tooltip"]').tooltip()
 		})
@@ -67,10 +69,11 @@ angular.module('MyApp.setup', ['ui.router'])
 
 		$scope.cities = [];
 
-		// FIXME! needs to remove the selected city instead of the index 1
-		$scope.removeCity = function($index){
-			$scope.cities.splice($index, 1);
+
+		$scope.removeCity = function(index){
+			$scope.cities.splice(index, 1);
 		}
+		
 
 		$scope.addCity = function() {
 
@@ -93,4 +96,3 @@ angular.module('MyApp.setup', ['ui.router'])
 	    }
 
 }])
-
