@@ -8,6 +8,7 @@ angular.module('MyApp', [
   'ui.router',
   'xeditable',
   'google.places',
+  'cfp.loadingBar',
   'angularModalService'])
 
 // add google maps dependency
@@ -37,3 +38,4 @@ angular.module('MyApp', [
     }, 1000);
   });
 });
+
