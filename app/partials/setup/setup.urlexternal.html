@@ -89,7 +89,7 @@
 								<!-- Enter a City Input -->
 								<div class="col-md-7 cities no-padding-sides">
 									<input type="radio" name="city" checked>
-									<input type="text" name="addcity" class="form-control city-input" ng-model="city" placeholder="City" required>
+									<input type="text" name="addcity" class="form-control city-input" ng-model="city" placeholder="City">
 									
 									<!-- FIXME! need to be able to add the radius value whenever a new city is added -->
 									<select class="form-control" name="radius" ng-model="blah" ng-options="mile.distance for mile in miles">
@@ -112,7 +112,7 @@
 
 								<!-- Add City - disabled by default -->
 								<div class="col-md-2 add-cities">
-									<button class="btn btn-primary" ng-disabled="externalUrlform.$invalid" ng-click="addCity()">Add City</button>
+									<button class="btn btn-primary" ng-click="addCity()">Add City</button>
 								</div>
 							</div>
 
@@ -207,6 +207,13 @@
 					<div ng-include=" 'partials/setup/campaign/error_restricted_keyword.html' "></div>
 				</div>
 			</form>
+
+			<!-- Next and Back buttons -->
+			<div class="col-md-12 back-button goals">
+            	<hr>
+            	<a href="" ui-sref="setup.campaign" class="btn btn-default pull-left">Back to Campaign</a>
+            	<a href="" ui-sref="setup.review" class="btn btn-primary pull-right" ng-disabled="externalUrlform.$invalid" ng-click="review()">Save &amp; Review</a>
+        	</div>
 		</div>
 	</div>
 </div>

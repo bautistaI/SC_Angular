@@ -157,5 +157,10 @@ angular.module('MyApp.setup', ['ui.router'])
 	    }
 
 
+	    $scope.review = function(){
+	    	
+	    }
+
+
 
 }])
