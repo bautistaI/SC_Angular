@@ -1,39 +1,48 @@
 /* app css stylesheet */
-body{
+body
+{
   font-size: 16px;
 }
-ul, ol{
+ul, ol
+{
   margin: 0;
   padding: 0;
 }
-li{
+li
+{
   list-style: none;
 }
-.menu {
+.menu 
+{
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
 }
 
-.menu:before {
+.menu:before 
+{
   content: "[";
 }
 
-.menu:after {
+.menu:after 
+{
   content: "]";
 }
 
-.menu > li {
+.menu > li 
+{
   display: inline;
 }
 
-.menu > li:before {
+.menu > li:before 
+{
   content: "|";
   padding-right: 0.3em;
 }
 
-.menu > li:nth-child(1):before {
+.menu > li:nth-child(1):before 
+{
   content: "";
   padding: 0;
 }
@@ -68,11 +77,16 @@ li{
   background: transparent no-repeat center 50%;
   background-image: url('components/ajax-loader.gif');
 }
+
+// ==== Spacers =====
 .add-space-left{
   margin-left: 10px;
 }
 .add-space-right{
   margin-right: 10px;
+}
+.add-space-around{
+  margin: 10px;
 }
 .add-space-bottom{
   margin-bottom: 20px;
@@ -84,11 +98,13 @@ li{
   padding-left: 0;
   padding-right: 0;
 }
+// ==================
 
 // --- FIXME!  Needs media queries Don't worry about this one
 .well{
   padding: 15%;
 }
+
 /* --- Animation --- */
 // main container ==============
 .animate-view-container { position:relative; min-height: 100%; }
@@ -142,11 +158,13 @@ $asbestos: #7F8C8D;
 
 $asphalt: #34495E;
 
+$emerald: #2ECC71;
+
 hr{
   border-top: 1px solid darken($neutral, 5%);
 }
 
-// =============================================================================================
+
 
 // ======================== SETUP ========================
 .required{
@@ -185,7 +203,7 @@ hr{
 .authorize-twitter-animation.ng-hide {
   opacity:0;
 }
-// ==============================================
+
 
 // =========== Current Twitter User =============
 .current-twitter-user{
@@ -402,12 +420,17 @@ span.info{
 
 // ==============  SIDEBAR LEFT ================
 .sidebar-left{
-  padding: 20px;
+  padding: 0 40px;
   .current-account{
     a{
       font-size: 14px;
       padding-bottom: 2px;
       border-bottom: 1px dashed #16a085;
+    }
+    .campaign-title{
+      margin: 10px 0;
+      padding: 0;
+      font-size: 40px;
     }
   }
 }
@@ -440,7 +463,178 @@ span.info{
 }
 // ============= @end sidebar left =============
 
+// ============= Tweet filter nav ==============
+.sorting-tweets{
+  font-size: 11px;
+  margin-bottom: 0;
+  width: 97.1%;
+  margin-left: 10px;
+  border-top: 1px solid darken($neutral, 10%);
+  border-left: 1px solid darken($neutral, 10%);
+  border-right: 1px solid darken($neutral, 10%);
+  li{
+    display: inline;
+    button{
+      font-size: 11px;
+      background: none;
+      color: $asbestos;
+      padding: 5px;
+    }
+  }
+  .filter{
+    position: relative;
+    top: 15px;
+  }
+}
+// =============================================
 
+
+// =============  TWEET STREAM ===================
+.tweets-stream{
+  min-height: 600px;
+  max-height: 700px;
+  overflow-y: scroll;
+  border: 1px solid darken($neutral, 10%);
+  margin-bottom: 20px;
+}
+.load-more-tweets{
+  margin-bottom: 50px;
+}
+.tweet{
+  border-top: 1px solid darken($neutral, 5%);
+  border-bottom: 1px solid darken($neutral, 5%);
+  padding: 10px;
+  background: #FFF;
+  height: 120px;
+  li{
+    display: inline;
+  }
+  .tweet-image{
+    margin-bottom: 30px;
+  }
+  .tweet-name{
+    font-weight: bold;
+    vertical-align: top;
+  }
+  .tweet-screen-name{
+    color: $asbestos;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+  }
+  .tweet-text{
+    display: block;
+    margin-left: 65px;
+    position: relative;
+    top: -20px;
+  }
+  .period{
+    position: relative;
+    top: -3px;
+    margin: 0 3px;
+  }
+  .supporting-icons{
+    margin-left: 65px;
+    position: relative;
+    top: -35px;
+    a{
+      color: $asbestos;
+      cursor: pointer;
+    }
+    .reply-icon{
+      transform: scaleX(-1);
+    }
+    .retweet-icon, .favorite-icon, .more-icon{
+      margin-left: 40px;
+    }
+    .more-icon{
+      position: relative;
+      top: -5px;
+      font-weight: bold;
+      font-size: 36px;
+    }
+    .view-summary{
+      font-size: 13px;
+      color: $blue;
+    }
+  }
+}
+// ----- Campaign Keywords Module ----------
+.campaign-keywords-module{
+  font-size: 15px;
+  font-weight: bold;
+  a{
+    cursor: pointer;
+  }
+}
+.keyword-settings{
+  position: absolute;
+  width: 240px;
+  z-index: 3000;
+  top: 300px;
+  left: 60px;
+  background: $neutral;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  li{
+    padding: 5px;
+    border: 1px solid darken($neutral, 10%);
+  }
+}
+.keywords
+{
+  li
+  {
+    width: 100%;
+    display: inline-block;
+    background: $blue;
+    margin: 5px;
+    border-radius: 10px;
+    transition: 300ms all linear;
+      &.active
+      {
+        background: $neutral;
+        text-shadow: 0 1px 1px $asbestos;
+      }
+      a
+      {
+        color: #FFF;
+        padding: 3px 10px;
+        cursor: default;
+        .fui-cross-circle
+        {
+          color: $neutral;
+          vertical-align: middle;
+          padding-right: 10px;
+          cursor: pointer;
+        }
+        .fui-eye
+        {
+          cursor: pointer;
+          color: $asphalt;
+          vertical-align: middle;
+          padding-right: 10px;
+        }
+      }
+    .tweets-amount
+    {
+      color: #FFF;
+      cursor: default;
+      padding: 3px 7px;
+      font-size: 11px;
+      border-radius: 10px;
+      white-space: nowrap;
+      position: relative;
+      top: -1px;
+      &.associated{background: $asphalt;}
+      &.deleted{background: $pomegranate;}
+      &.replied{background: $emerald;}
+    }
+  }
+}
+
+
+// -----------------------------------------
+// ===============================================
 
 
 /* ============================ ACCOUNT (account settings, billing and emai settings) ========================== */

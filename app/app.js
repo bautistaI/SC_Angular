@@ -3,16 +3,16 @@
 angular.module('MyApp', [
   'MyApp.account',
   'MyApp.tweets',
-  'MyApp.setup',  
+  'MyApp.setup',
   'ngAnimate', 
   'ui.router',
   'xeditable',
   'google.places',
-  'cfp.loadingBar',
   'angularModalService'])
 
 // add google maps dependency
 // 'google-maps'.ns(),
+
 
 .config(['$stateProvider', '$urlRouterProvider', 
   function($stateProvider, $urlRouterProvider){
@@ -37,5 +37,6 @@ angular.module('MyApp', [
       $rootScope.isLoading = false;
     }, 1000);
   });
-});
+})
+
 

@@ -1,0 +1,198 @@
+[2014-11-24T01:46:02+00:00] INFO: Forking chef instance to converge...
+[2014-11-24T01:46:02+00:00] WARN: 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+SSL validation of HTTPS requests is disabled. HTTPS connections are still
+encrypted, but chef is not able to detect forged replies or man in the middle
+attacks.
+
+To fix this issue add an entry like this to your configuration file:
+
+```
+  # Verify all HTTPS connections (recommended)
+  ssl_verify_mode :verify_peer
+
+  # OR, Verify only connections to chef-server
+  verify_api_cert true
+```
+
+To check your SSL configuration, or troubleshoot errors, you can use the
+`knife ssl check` command like so:
+
+```
+  knife ssl check -c /etc/chef/client.rb
+```
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+[2014-11-24T01:46:02+00:00] INFO: *** Chef 11.16.4 ***
+[2014-11-24T01:46:02+00:00] INFO: Chef-client pid: 28845
+[2014-11-24T01:46:04+00:00] INFO: Run List is [role[uxangular], role[nodejs], role[web]]
+[2014-11-24T01:46:04+00:00] INFO: Run List expands to [HiplogiqDeploy::uxangular_setup, HiplogiqDeploy::nodejs_setup]
+[2014-11-24T01:46:04+00:00] INFO: Starting Chef Run for uxangular
+[2014-11-24T01:46:04+00:00] INFO: Running start handlers
+[2014-11-24T01:46:04+00:00] INFO: Start handlers complete.
+[2014-11-24T01:46:04+00:00] INFO: HTTP Request Returned 404 Object Not Found: 
+[2014-11-24T01:46:05+00:00] INFO: Loading cookbooks [HiplogiqDeploy@0.0.4, shorewall@0.0.1, apt@2.6.0, ohai@2.0.1, build-essential@2.0.6, nginx@2.7.4, bluepill@2.3.1, rsyslog@1.12.2, runit@1.5.10, yum@3.3.2, yum-epel@0.5.1, rvm@0.9.2, chef_gem@0.1.0, redisio@2.2.4, ulimit@0.3.2, sidekiq@0.4.1, logrotate@1.7.0, haproxy@1.6.6, cpu@0.2.0, rabbitmq@3.3.0, erlang@1.5.6, yum-erlang_solutions@0.2.0, jenkins@2.1.2, redmine@0.1.0, git@4.0.2, dmg@2.2.0, windows@1.34.6, chef_handler@1.1.6, apache2@2.0.0, iptables@0.14.0, pacman@1.1.1, mysql@5.5.3, yum-mysql-community@0.1.10, database@2.3.0, postgresql@3.4.2, openssl@2.0.0, chef-sugar@2.3.2, aws@2.4.0, xfs@1.1.0, mysql-chef_gem@0.0.5, postfix@3.6.2, nodejs@2.2.1, ark@0.9.0, 7-zip@1.0.2, wordpress@2.3.0, php@1.5.0, xml@1.2.6, iis@2.1.5, tar@0.5.0, php-fpm@0.6.10, application_ruby@3.0.2, puma@0.1.7, monit@0.7.4, unicorn@2.0.0, passenger_apache2@2.2.2, application@4.1.4]
+[2014-11-24T01:46:08+00:00] INFO: WindowsPackage lightweight resource already initialized -- overriding!
+[2014-11-24T01:46:08+00:00] WARN: Cloning resource attributes for service[shorewall] from prior resource (CHEF-3694)
+[2014-11-24T01:46:08+00:00] WARN: Previous service[shorewall]: /var/chef/cache/cookbooks/shorewall/recipes/package.rb:14:in `from_file'
+[2014-11-24T01:46:08+00:00] WARN: Current  service[shorewall]: /var/chef/cache/cookbooks/shorewall/recipes/default.rb:4:in `from_file'
+[2014-11-24T01:46:08+00:00] INFO: Processing chef_gem[rvm] action install (rvm::default line 21)
+[2014-11-24T01:46:08+00:00] INFO: gem_package resource has been patched to use provider Chef::Provider::Package::RVMRubygems and will install gems to the ruby-1.9.3-p327 RVM Ruby.
+[2014-11-24T01:46:08+00:00] INFO: Processing chef_gem[sshkey] action install (HiplogiqDeploy::deploy_ssh_setup line 2)
+[2014-11-24T01:46:11+00:00] INFO: ohai plugins will be at: /etc/chef/ohai_plugins
+[2014-11-24T01:46:11+00:00] INFO: Processing remote_directory[/etc/chef/ohai_plugins for cookbook ohai] action create (ohai::default line 33)
+[2014-11-24T01:46:11+00:00] INFO: Processing cookbook_file[/etc/chef/ohai_plugins/README] action create (dynamically defined)
+[2014-11-24T01:46:11+00:00] INFO: Processing ohai[custom_plugins] action reload (ohai::default line 47)
+[2014-11-24T01:46:11+00:00] WARN: [DEPRECATION] Plugin at /etc/chef/ohai_plugins/nginx.rb is a version 6 plugin. Version 6 plugins will not be supported in future releases of Ohai. Please upgrade your plugin to version 7 plugin syntax. For more information visit here: docs.opscode.com/ohai_custom.html
+[2014-11-24T01:46:14+00:00] INFO: ohai[custom_plugins] reloaded
+[2014-11-24T01:46:14+00:00] WARN: Cloning resource attributes for service[nginx] from prior resource (CHEF-3694)
+[2014-11-24T01:46:14+00:00] WARN: Previous service[nginx]: /var/chef/cache/cookbooks/nginx/recipes/package.rb:46:in `from_file'
+[2014-11-24T01:46:14+00:00] WARN: Current  service[nginx]: /var/chef/cache/cookbooks/nginx/recipes/default.rb:24:in `from_file'
+[2014-11-24T01:46:14+00:00] WARN: Cloning resource attributes for template[/etc/nginx/sites-available/default] from prior resource (CHEF-3694)
+[2014-11-24T01:46:14+00:00] WARN: Previous template[/etc/nginx/sites-available/default]: /var/chef/cache/cookbooks/nginx/recipes/commons_conf.rb:31:in `from_file'
+[2014-11-24T01:46:14+00:00] WARN: Current  template[/etc/nginx/sites-available/default]: /var/chef/cache/cookbooks/HiplogiqDeploy/recipes/nodejs_setup.rb:17:in `block in from_file'
+[2014-11-24T01:46:14+00:00] INFO: Processing execute[apt-get-update] action run (apt::default line 45)
+[2014-11-24T01:46:14+00:00] INFO: Processing execute[apt-get update] action nothing (apt::default line 53)
+[2014-11-24T01:46:14+00:00] INFO: Processing execute[apt-get autoremove] action nothing (apt::default line 61)
+[2014-11-24T01:46:14+00:00] INFO: Processing execute[apt-get autoclean] action nothing (apt::default line 68)
+[2014-11-24T01:46:14+00:00] INFO: Processing package[update-notifier-common] action install (apt::default line 75)
+[2014-11-24T01:46:14+00:00] INFO: Processing execute[apt-get-update-periodic] action run (apt::default line 80)
+[2014-11-24T01:46:14+00:00] INFO: Processing directory[/var/cache/local] action create (apt::default line 91)
+[2014-11-24T01:46:14+00:00] INFO: Processing directory[/var/cache/local/preseeding] action create (apt::default line 91)
+[2014-11-24T01:46:14+00:00] INFO: Processing apt_repository[shorewall] action add (shorewall::repo line 6)
+[2014-11-24T01:46:14+00:00] INFO: Processing file[/var/lib/apt/periodic/update-success-stamp] action nothing (/var/chef/cache/cookbooks/apt/providers/repository.rb line 147)
+[2014-11-24T01:46:14+00:00] INFO: Processing execute[apt-cache gencaches] action nothing (/var/chef/cache/cookbooks/apt/providers/repository.rb line 151)
+[2014-11-24T01:46:14+00:00] INFO: Processing execute[apt-get update] action nothing (/var/chef/cache/cookbooks/apt/providers/repository.rb line 156)
+[2014-11-24T01:46:14+00:00] INFO: Processing file[/etc/apt/sources.list.d/shorewall.list] action create (/var/chef/cache/cookbooks/apt/providers/repository.rb line 185)
+[2014-11-24T01:46:14+00:00] INFO: Processing package[shorewall] action install (shorewall::package line 9)
+[2014-11-24T01:46:14+00:00] INFO: Processing service[shorewall] action enable (shorewall::package line 14)
+[2014-11-24T01:46:14+00:00] INFO: Processing template[/etc/shorewall/rules] action create (shorewall::files line 3)
+[2014-11-24T01:46:14+00:00] INFO: Processing template[/etc/shorewall/zones] action create (shorewall::files line 3)
+[2014-11-24T01:46:14+00:00] INFO: Processing template[/etc/shorewall/interfaces] action create (shorewall::files line 3)
+[2014-11-24T01:46:14+00:00] INFO: Processing template[/etc/shorewall/policy] action create (shorewall::files line 3)
+[2014-11-24T01:46:14+00:00] INFO: Processing template[/etc/shorewall/shorewall.conf] action create (shorewall::files line 3)
+[2014-11-24T01:46:14+00:00] INFO: Processing template[/etc/default/shorewall] action create (shorewall::files line 22)
+[2014-11-24T01:46:14+00:00] INFO: Processing service[shorewall] action start (shorewall::default line 4)
+[2014-11-24T01:46:14+00:00] INFO: Processing chef_gem[rvm] action install (rvm::default line 21)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[sed] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[grep] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[tar] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[gzip] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[bzip2] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[bash] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[curl] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing package[git-core] action install (rvm::user_install line 45)
+[2014-11-24T01:46:15+00:00] INFO: Processing template[/home/deploy/.rvmrc] action create (rvm::user_install line 145)
+[2014-11-24T01:46:15+00:00] INFO: Processing execute[install user RVM for deploy] action run (rvm::user_install line 76)
+[2014-11-24T01:46:15+00:00] INFO: Processing execute[upgrade user RVM for deploy to none] action run (rvm::user_install line 115)
+[2014-11-24T01:46:15+00:00] INFO: Processing rvm_ruby[2.1.2] action install (rvm::user line 177)
+[2014-11-24T01:46:16+00:00] INFO: Processing rvm_ruby[1.9.3-p327] action install (rvm::user line 177)
+[2014-11-24T01:46:17+00:00] INFO: Processing rvm_default_ruby[2.1.2] action create (rvm::user line 185)
+[2014-11-24T01:46:19+00:00] INFO: Processing rvm_global_gem[bundler] action install (rvm::user line 191)
+[2014-11-24T01:46:19+00:00] INFO: Processing execute[Add bundler -v1.7.4 to /home/deploy/.rvm/gemsets/global.gems] action run (/var/chef/cache/cookbooks/rvm/providers/global_gem.rb line 79)
+[2014-11-24T01:46:20+00:00] INFO: Processing rvm_gem[bundler] action install (/var/chef/cache/cookbooks/rvm/providers/global_gem.rb line 48)
+[2014-11-24T01:46:21+00:00] WARN: Cloning resource attributes for rvm_gem[bundler] from prior resource (CHEF-3694)
+[2014-11-24T01:46:21+00:00] WARN: Previous rvm_gem[bundler]: /var/chef/cache/cookbooks/rvm/providers/global_gem.rb:48:in `gem_package_wrapper'
+[2014-11-24T01:46:21+00:00] WARN: Current  rvm_gem[bundler]: /var/chef/cache/cookbooks/rvm/providers/global_gem.rb:48:in `gem_package_wrapper'
+[2014-11-24T01:46:21+00:00] INFO: Processing rvm_gem[bundler] action install (/var/chef/cache/cookbooks/rvm/providers/global_gem.rb line 48)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[Add bundler -v1.7.4 to /home/deploy/.rvm/gemsets/global.gems] action nothing (/var/chef/cache/cookbooks/rvm/providers/global_gem.rb line 79)
+[2014-11-24T01:46:23+00:00] INFO: Processing rvm_gem[bundler] action nothing (/var/chef/cache/cookbooks/rvm/providers/global_gem.rb line 48)
+[2014-11-24T01:46:23+00:00] INFO: Processing rvm_gem[bundler] action nothing (/var/chef/cache/cookbooks/rvm/providers/global_gem.rb line 48)
+[2014-11-24T01:46:23+00:00] INFO: Processing template[/etc/profile.d/rvm.sh] action create (HiplogiqDeploy::gen_rvm_sh line 2)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[create_fs] action run (HiplogiqDeploy::mount_data_disk line 2)
+[2014-11-24T01:46:23+00:00] INFO: Processing directory[/mnt/data] action create (HiplogiqDeploy::mount_data_disk line 9)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[update_fstab] action run (HiplogiqDeploy::mount_data_disk line 15)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[mount_all_fs] action run (HiplogiqDeploy::mount_data_disk line 22)
+[2014-11-24T01:46:23+00:00] INFO: execute[mount_all_fs] ran successfully
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[initialize_swap] action run (HiplogiqDeploy::mount_swap line 3)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[create_swap] action run (HiplogiqDeploy::mount_swap line 9)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[activate_swap] action run (HiplogiqDeploy::mount_swap line 15)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[update_fstab_for_swap] action run (HiplogiqDeploy::mount_swap line 21)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[update_stsctl_for_swap] action run (HiplogiqDeploy::mount_swap line 27)
+[2014-11-24T01:46:23+00:00] INFO: Processing file[/home/deploy/1gb_swap_genfile.sh] action create (HiplogiqDeploy::mount_swap line 33)
+[2014-11-24T01:46:23+00:00] INFO: Processing chef_gem[sshkey] action install (HiplogiqDeploy::deploy_ssh_setup line 2)
+[2014-11-24T01:46:23+00:00] INFO: Processing directory[/home/deploy/.ssh] action create (HiplogiqDeploy::deploy_ssh_setup line 15)
+[2014-11-24T01:46:23+00:00] INFO: Processing file[/home/deploy/.ssh/id_rsa] action create_if_missing (HiplogiqDeploy::deploy_ssh_setup line 23)
+[2014-11-24T01:46:23+00:00] INFO: Processing file[/home/deploy/.ssh/id_rsa.pub] action create_if_missing (HiplogiqDeploy::deploy_ssh_setup line 32)
+[2014-11-24T01:46:23+00:00] INFO: Processing ruby_block[deploy-save-pubkey] action run (HiplogiqDeploy::deploy_ssh_setup line 40)
+[2014-11-24T01:46:23+00:00] INFO: ruby_block[deploy-save-pubkey] called
+[2014-11-24T01:46:23+00:00] INFO: Processing template[/home/deploy/.ssh/authorized_keys] action create (HiplogiqDeploy::deploy_ssh_setup line 60)
+[2014-11-24T01:46:23+00:00] INFO: Processing package[apt-transport-https] action install (nodejs::repo line 5)
+[2014-11-24T01:46:23+00:00] INFO: Processing apt_repository[node.js] action add (nodejs::repo line 7)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[install-key 1655a0ab68576280] action run (/var/chef/cache/cookbooks/apt/providers/repository.rb line 28)
+[2014-11-24T01:46:23+00:00] INFO: Processing file[/var/lib/apt/periodic/update-success-stamp] action nothing (/var/chef/cache/cookbooks/apt/providers/repository.rb line 147)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[apt-cache gencaches] action nothing (/var/chef/cache/cookbooks/apt/providers/repository.rb line 151)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[apt-get update] action nothing (/var/chef/cache/cookbooks/apt/providers/repository.rb line 156)
+[2014-11-24T01:46:23+00:00] INFO: Processing file[/etc/apt/sources.list.d/node.js.list] action create (/var/chef/cache/cookbooks/apt/providers/repository.rb line 185)
+[2014-11-24T01:46:23+00:00] INFO: Processing package[nodejs] action install (nodejs::nodejs_from_package line 26)
+[2014-11-24T01:46:23+00:00] INFO: Processing nodejs_npm[http-server] action install (HiplogiqDeploy::nodejs_setup line 4)
+[2014-11-24T01:46:23+00:00] INFO: Processing execute[install NPM package http-server] action run (/var/chef/cache/cookbooks/nodejs/providers/npm.rb line 6)
+[2014-11-24T01:46:24+00:00] INFO: Processing ohai[reload_nginx] action nothing (nginx::ohai_plugin line 22)
+[2014-11-24T01:46:24+00:00] INFO: Processing template[/etc/chef/ohai_plugins/nginx.rb] action create (nginx::ohai_plugin line 27)
+[2014-11-24T01:46:24+00:00] INFO: Processing remote_directory[/etc/chef/ohai_plugins for cookbook ohai] action nothing (ohai::default line 33)
+[2014-11-24T01:46:24+00:00] INFO: Processing ohai[custom_plugins] action nothing (ohai::default line 47)
+[2014-11-24T01:46:24+00:00] INFO: Processing package[nginx] action install (nginx::package line 40)
+[2014-11-24T01:46:24+00:00] INFO: Processing service[nginx] action enable (nginx::package line 46)
+[2014-11-24T01:46:24+00:00] INFO: Processing directory[/etc/nginx] action create (nginx::commons_dir line 22)
+[2014-11-24T01:46:24+00:00] INFO: Processing directory[/var/log/nginx] action create (nginx::commons_dir line 29)
+[2014-11-24T01:46:24+00:00] INFO: Processing directory[/var/run] action create (nginx::commons_dir line 36)
+[2014-11-24T01:46:24+00:00] INFO: Processing directory[/etc/nginx/sites-available] action create (nginx::commons_dir line 44)
+[2014-11-24T01:46:24+00:00] INFO: Processing directory[/etc/nginx/sites-enabled] action create (nginx::commons_dir line 44)
+[2014-11-24T01:46:24+00:00] INFO: Processing directory[/etc/nginx/conf.d] action create (nginx::commons_dir line 44)
+[2014-11-24T01:46:24+00:00] INFO: Processing template[/usr/sbin/nxensite] action create (nginx::commons_script line 23)
+[2014-11-24T01:46:24+00:00] INFO: Processing template[/usr/sbin/nxdissite] action create (nginx::commons_script line 23)
+[2014-11-24T01:46:24+00:00] INFO: Processing template[nginx.conf] action create (nginx::commons_conf line 22)
+[2014-11-24T01:46:24+00:00] INFO: Processing template[/etc/nginx/sites-available/default] action create (nginx::commons_conf line 31)
+[2014-11-24T01:46:24+00:00] INFO: template[/etc/nginx/sites-available/default] backed up to /var/chef/backup/etc/nginx/sites-available/default.chef-20141124014624.862201
+[2014-11-24T01:46:24+00:00] INFO: template[/etc/nginx/sites-available/default] removed backup at /var/chef/backup/./etc/nginx/sites-available/default.chef-20141120211652.032862
+[2014-11-24T01:46:24+00:00] INFO: template[/etc/nginx/sites-available/default] updated file contents /etc/nginx/sites-available/default
+[2014-11-24T01:46:24+00:00] INFO: template[/etc/nginx/sites-available/default] not queuing delayed action reload on service[nginx] (delayed), as it's already been queued
+[2014-11-24T01:46:24+00:00] INFO: Processing execute[nxensite default] action run (nginx::commons_conf line 24)
+[2014-11-24T01:46:24+00:00] INFO: Processing service[nginx] action start (nginx::default line 24)
+[2014-11-24T01:46:27+00:00] INFO: service[nginx] started
+[2014-11-24T01:46:27+00:00] INFO: Processing template[/etc/nginx/sites-available/default] action create (HiplogiqDeploy::nodejs_setup line 17)
+[2014-11-24T01:46:27+00:00] INFO: template[/etc/nginx/sites-available/default] backed up to /var/chef/backup/etc/nginx/sites-available/default.chef-20141124014627.548641
+[2014-11-24T01:46:27+00:00] INFO: template[/etc/nginx/sites-available/default] removed backup at /var/chef/backup/./etc/nginx/sites-available/default.chef-20141122001658.837019
+[2014-11-24T01:46:27+00:00] INFO: template[/etc/nginx/sites-available/default] updated file contents /etc/nginx/sites-available/default
+[2014-11-24T01:46:27+00:00] INFO: template[/etc/nginx/sites-available/default] not queuing delayed action reload on service[nginx] (delayed), as it's already been queued
+[2014-11-24T01:46:27+00:00] INFO: template[/etc/nginx/sites-available/default] not queuing delayed action reload on service[nginx] (delayed), as it's already been queued
+[2014-11-24T01:46:27+00:00] INFO: Processing application[SC_Angular] action deploy (HiplogiqDeploy::nodejs_setup line 33)
+[2014-11-24T01:46:27+00:00] INFO: Processing directory[/var/www/vhosts/SC_Angular] action create (/var/chef/cache/cookbooks/application/providers/default.rb line 75)
+[2014-11-24T01:46:27+00:00] INFO: Processing directory[/var/www/vhosts/SC_Angular/shared] action create (/var/chef/cache/cookbooks/application/providers/default.rb line 82)
+[2014-11-24T01:46:27+00:00] INFO: Processing file[/var/www/vhosts/SC_Angular/id_deploy] action create (/var/chef/cache/cookbooks/application/providers/default.rb line 90)
+[2014-11-24T01:46:27+00:00] INFO: Processing template[/var/www/vhosts/SC_Angular/deploy-ssh-wrapper] action create (/var/chef/cache/cookbooks/application/providers/default.rb line 97)
+[2014-11-24T01:46:27+00:00] INFO: Processing ruby_block[SC_Angular before_deploy] action run (/var/chef/cache/cookbooks/application/providers/default.rb line 107)
+[2014-11-24T01:46:27+00:00] INFO: ruby_block[SC_Angular before_deploy] called
+[2014-11-24T01:46:27+00:00] INFO: Processing deploy_revision[SC_Angular] action deploy (/var/chef/cache/cookbooks/application/providers/default.rb line 123)
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] updated to revision 4085c704dccb9d50f59ddffdd34cbeee2c45e808
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] set user to deploy
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] set group to www-data
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] copied the cached checkout to /var/www/vhosts/SC_Angular/releases/4085c704dccb9d50f59ddffdd34cbeee2c45e808
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] set user to deploy
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] set group to www-data
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] running callback before_migrate
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] made pre-migration symlinks
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] running callback before_symlink
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] purged directories in checkout 
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] created directories before symlinking: 
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] linked shared paths into current release: 
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] made pre-migration symlinks
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] set user to deploy
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] set group to www-data
+[2014-11-24T01:46:30+00:00] INFO: deploy_revision[SC_Angular] linked release /var/www/vhosts/SC_Angular/releases/4085c704dccb9d50f59ddffdd34cbeee2c45e808 into production at /var/www/vhosts/SC_Angular/current
+[2014-11-24T01:46:31+00:00] INFO: deploy_revision[SC_Angular] set user to deploy
+[2014-11-24T01:46:31+00:00] INFO: deploy_revision[SC_Angular] set group to www-data
+[2014-11-24T01:46:31+00:00] INFO: deploy_revision[SC_Angular] updated symlinks
+[2014-11-24T01:46:31+00:00] INFO: deploy_revision[SC_Angular] running callback before_restart
+[2014-11-24T01:46:31+00:00] INFO: deploy_revision[SC_Angular] restarting app with embedded recipe
+[2014-11-24T01:46:31+00:00] INFO: deploy_revision[SC_Angular] running callback after_restart
+[2014-11-24T01:46:31+00:00] INFO: deploy_revision[SC_Angular] deployed to /var/www/vhosts/SC_Angular
+[2014-11-24T01:46:31+00:00] INFO: Processing template[/etc/init/SC_Angular-server.conf] action create (HiplogiqDeploy::nodejs_setup line 51)
+[2014-11-24T01:46:31+00:00] INFO: Processing service[SC_Angular-server] action start (HiplogiqDeploy::nodejs_setup line 68)
+[2014-11-24T01:46:31+00:00] INFO: Processing service[SC_Angular-server] action enable (HiplogiqDeploy::nodejs_setup line 68)
+[2014-11-24T01:46:31+00:00] INFO: template[/etc/nginx/sites-available/default] sending reload action to service[nginx] (delayed)
+[2014-11-24T01:46:31+00:00] INFO: Processing service[nginx] action reload (nginx::default line 24)
+[2014-11-24T01:46:31+00:00] INFO: Chef Run complete in 26.913557655 seconds
+[2014-11-24T01:46:31+00:00] INFO: Running report handlers
+[2014-11-24T01:46:31+00:00] INFO: Report handlers complete

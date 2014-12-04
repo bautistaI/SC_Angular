@@ -1,11 +1,14 @@
 <!doctype html>
 <html ng-app='MyApp'>
 <head>
-	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+	<!-- ===== TRACKING SNNIPETS ====== -->
+	<!-- initialize Optimizely -->
+	<script src="//cdn.optimizely.com/js/107500616.js"></script>
+	<!-- ============================== -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css">
 	<link rel="stylesheet" href="bower_components/angular-google-places-autocomplete/src/autocomplete.css">
-	<link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+	<!-- <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css"> -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
 	<link rel="stylesheet" href="components/messenger/css/messenger.css">
@@ -27,7 +30,7 @@
 
 
 	<!-- Footer -->
-	<nav class="navbar navbar-inverse navbar-custom navbar-embossed navbar-fixed-bottom" role="navigation" ng-include=" 'partials/footer/footer.html' "></nav>
+	<!-- <nav class="navbar navbar-inverse navbar-custom navbar-embossed navbar-fixed-bottom" role="navigation" ng-include=" 'partials/footer/footer.html' "></nav> -->
 
 
 
@@ -44,7 +47,7 @@
 <script src="bower_components/flat-ui/dist/js/flat-ui.min.js"></script>
 <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+<!-- <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script> -->
 <script src='https://maps.googleapis.com/maps/api/js?libraries=places'></script>
 <script src="bower_components/angular-google-places-autocomplete/src/autocomplete.js"></script>
 <script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>  
@@ -55,9 +58,9 @@
 <script src="components/messenger/js/messenger.min.js"></script>
 <script src="components/messenger/js/messenger.js"></script>
 <script src="app.js"></script>
-<script src="partials/tweets/tweets.js"></script>
 <script src="partials/account/account.js"></script>
 <script src="partials/setup/setup.js"></script>
+<script src="partials/tweets/tweets.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>

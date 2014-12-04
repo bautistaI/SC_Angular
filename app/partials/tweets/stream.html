@@ -1,0 +1,109 @@
+<div class="container-fluid">
+	<div class="row padded">
+		<div class="col-md-4 col-xs-4 sidebar-left pull-left">
+			<!-- Current Twitter Account Information  -->
+			<div ng-include=" 'partials/tweets/twitter_account/current-account.html' "></div>
+	
+			<!-- Campaign Keywords Module -->
+			<!-- I used to have -->
+			<!-- <div ng-include=" 'partials/tweets/campaign-keywords.html ' "></div> -->
+
+			<!-- ==================== CAMPAIGN KEYWORDS ============================ -->
+			<p class="campaign-keywords-module text-center">CAMPAIGN KEYWORDS <a class="fui-gear pull-right" ng-click="settings=!settings" data-toggle="tooltip" data-placement="left" title="Toggle between delete and visibility"></a></p>
+			<!-- Activate this button if you don't wanna use the dropdown menu on the gear icon -->
+			<!-- <p class="text-center"><button class="btn btn-primary" ng-click="deleteIcon=!deleteIcon">Toggle Delete Keywords / Hidding Tweets</button></p> -->
+
+			<div class="keyword-settings text-right" ng-show="settings">
+				<ul>
+					<li><a href ng-click="deleteIcon=!deleteIcon">Toggle Delete Mode/Hide Mode</a></li>
+				</ul>
+			</div>
+			<div class="keywords">
+					<ul>
+						<li ng-class="{active: isSweetActive}" ng-hide="deleteSweetTooth">
+							<a>
+								sweet tooth 
+								<!-- ++++ same functionality for all keywords ++++ -->
+								<!-- delete icon / "deletes" the tweet with keyword sweet tooth $scope Sweet -->
+								<!-- ng-showdeleteIcon toggles between delete and visibility icons whithin the keyword-settings above -->
+								<span ng-show="!deleteIcon" class="fui-cross-circle pull-right" ng-click="delSweet()"></span>
+
+								<!-- visibility icon / hides the tweet associated with sweet tooth -->
+								<span ng-show="deleteIcon" class="fui-eye pull-right" ng-click="hideSweet()"></span>
+							</a>
+							<!-- number of current tweets associated with this keyword  -->
+							<span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets associated with this keyword">3</span>
+							<span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets replied with this keyword">15</span>
+							<span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets deleted with this keyword">57</span>
+
+						</li>
+
+						<li ng-class="{active: isCupcake}" ng-hide="deleteCupcake">
+							<a>
+								cupcake
+								<span ng-show="!deleteIcon" class="fui-cross-circle pull-right" ng-click="delCupcake()"></span>
+								<span ng-show="deleteIcon" class="fui-eye pull-right" ng-click="hideCupcake()"></span>
+							</a>
+							<span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets associated with this keyword">4</span>
+							<span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets replied with this keyword">27</span>
+							<span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets deleted with this keyword">28</span>
+						</li>
+
+						<li ng-class="{active: isCake}" ng-hide="deleteCake">
+							<a>
+								cake
+								<span ng-show="!deleteIcon" class="fui-cross-circle pull-right" ng-click="delCake()"></span>
+								<span ng-show="deleteIcon" class="fui-eye pull-right" ng-click="hideCake()"></span>
+							</a>
+							<span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets associated with this keyword">2</span>
+							<span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets replied with this keyword">19</span>
+							<span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets deleted with this keyword">34</span>
+						</li>
+
+						<li ng-class="{active: isCookie}" ng-hide="deleteCookie">
+							<a>
+								cookie
+								<span ng-show="!deleteIcon" class="fui-cross-circle pull-right" ng-click="delCookie()"></span>
+								<span ng-show="deleteIcon" class="fui-eye pull-right" ng-click="hideCookie()"></span>
+							</a>
+							<span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets associated with this keyword">2</span>
+							<span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets replied with this keyword">5</span>
+							<span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="top" title="Tweets deleted with this keyword">12</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- ================================================================================================================== -->
+
+		
+		<div class="col-md-8 col-xs-8">
+			<!-- Sorting Tweets Navbar -->
+			<ul class="sorting-tweets navbar navbar-default navbar-static-top">
+				<li class="col-md-5 col-xs-5 filter">SORT BY: 
+					<button class="btn btn-default">OLDEST</button>
+					<button class="btn btn-default">NEWEST</button>
+					<button class="btn btn-default">RELEVANCE</button>
+				</li>
+				<li class="col-md-3 col-xs-3 filter">
+					PROFANITY:
+					<button class="btn btn-default">NO</button>
+					<button class="btn btn-default">YES</button>
+				</li>
+				<li class="col-md-4 col-xs-4 filter">
+					TWEETS PER PAGE:
+					<button class="btn btn-default">5</button>
+					<button class="btn btn-default">10</button>
+					<button class="btn btn-default">20</button>
+				</li>
+			</ul>
+
+			<!-- Tweets List -->
+  			<div ng-include=" 'partials/tweets/tweets.html' "></div>
+
+  			<!-- Get more Tweets Button -->
+  			<div class="load-more-tweets text-center">
+  				<button class="btn btn-info">GET MORE TWEETS</button>
+  			</div>
+		</div>
+	</div>
+</div>

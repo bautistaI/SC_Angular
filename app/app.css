@@ -68,6 +68,9 @@ li {
 .add-space-right {
   margin-right: 10px; }
 
+.add-space-around {
+  margin: 10px; }
+
 .add-space-bottom {
   margin-bottom: 20px; }
 
@@ -318,11 +321,15 @@ span.info {
   width: 80%; }
 
 .sidebar-left {
-  padding: 20px; }
+  padding: 0 40px; }
   .sidebar-left .current-account a {
     font-size: 14px;
     padding-bottom: 2px;
     border-bottom: 1px dashed #16a085; }
+  .sidebar-left .current-account .campaign-title {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 40px; }
 
 .fake-user {
   width: 100px;
@@ -346,6 +353,140 @@ span.info {
     display: block;
     color: #2c3e50;
     padding: 20px; }
+
+.sorting-tweets {
+  font-size: 11px;
+  margin-bottom: 0;
+  width: 97.1%;
+  margin-left: 10px;
+  border-top: 1px solid #c8d1db;
+  border-left: 1px solid #c8d1db;
+  border-right: 1px solid #c8d1db; }
+  .sorting-tweets li {
+    display: inline; }
+    .sorting-tweets li button {
+      font-size: 11px;
+      background: none;
+      color: #7f8c8d;
+      padding: 5px; }
+  .sorting-tweets .filter {
+    position: relative;
+    top: 15px; }
+
+.tweets-stream {
+  min-height: 600px;
+  max-height: 700px;
+  overflow-y: scroll;
+  border: 1px solid #c8d1db;
+  margin-bottom: 20px; }
+
+.load-more-tweets {
+  margin-bottom: 50px; }
+
+.tweet {
+  border-top: 1px solid #d8dee5;
+  border-bottom: 1px solid #d8dee5;
+  padding: 10px;
+  background: #FFF;
+  height: 120px; }
+  .tweet li {
+    display: inline; }
+  .tweet .tweet-image {
+    margin-bottom: 30px; }
+  .tweet .tweet-name {
+    font-weight: bold;
+    vertical-align: top; }
+  .tweet .tweet-screen-name {
+    color: #7f8c8d;
+    font-size: 12px;
+    position: relative;
+    top: -10px; }
+  .tweet .tweet-text {
+    display: block;
+    margin-left: 65px;
+    position: relative;
+    top: -20px; }
+  .tweet .period {
+    position: relative;
+    top: -3px;
+    margin: 0 3px; }
+  .tweet .supporting-icons {
+    margin-left: 65px;
+    position: relative;
+    top: -35px; }
+    .tweet .supporting-icons a {
+      color: #7f8c8d;
+      cursor: pointer; }
+    .tweet .supporting-icons .reply-icon {
+      transform: scaleX(-1); }
+    .tweet .supporting-icons .retweet-icon, .tweet .supporting-icons .favorite-icon, .tweet .supporting-icons .more-icon {
+      margin-left: 40px; }
+    .tweet .supporting-icons .more-icon {
+      position: relative;
+      top: -5px;
+      font-weight: bold;
+      font-size: 36px; }
+    .tweet .supporting-icons .view-summary {
+      font-size: 13px;
+      color: #399acf; }
+
+.campaign-keywords-module {
+  font-size: 15px;
+  font-weight: bold; }
+  .campaign-keywords-module a {
+    cursor: pointer; }
+
+.keyword-settings {
+  position: absolute;
+  width: 240px;
+  z-index: 3000;
+  top: 300px;
+  left: 60px;
+  background: #e7ebef;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
+  .keyword-settings li {
+    padding: 5px;
+    border: 1px solid #c8d1db; }
+
+.keywords li {
+  width: 100%;
+  display: inline-block;
+  background: #399acf;
+  margin: 5px;
+  border-radius: 10px;
+  transition: 300ms all linear; }
+  .keywords li.active {
+    background: #e7ebef;
+    text-shadow: 0 1px 1px #7f8c8d; }
+  .keywords li a {
+    color: #FFF;
+    padding: 3px 10px;
+    cursor: default; }
+    .keywords li a .fui-cross-circle {
+      color: #e7ebef;
+      vertical-align: middle;
+      padding-right: 10px;
+      cursor: pointer; }
+    .keywords li a .fui-eye {
+      cursor: pointer;
+      color: #34495e;
+      vertical-align: middle;
+      padding-right: 10px; }
+  .keywords li .tweets-amount {
+    color: #FFF;
+    cursor: default;
+    padding: 3px 7px;
+    font-size: 11px;
+    border-radius: 10px;
+    white-space: nowrap;
+    position: relative;
+    top: -1px; }
+    .keywords li .tweets-amount.associated {
+      background: #34495e; }
+    .keywords li .tweets-amount.deleted {
+      background: #c0392b; }
+    .keywords li .tweets-amount.replied {
+      background: #2ecc71; }
 
 /* ============================ ACCOUNT (account settings, billing and emai settings) ========================== */
 .account-settings {
