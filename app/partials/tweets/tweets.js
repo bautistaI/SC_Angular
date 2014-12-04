@@ -16,6 +16,8 @@ angular.module('MyApp.tweets', ['ui.router'])
         $('[data-toggle="tooltip"]').tooltip()
     })
 
+
+// FIXME!  I have several functions that are being repeated. I'd like to make a factory or service to host that functionality there instead of in this controller
 // ========= SWEET TOOTH KEYWORD INTERACTION ===============
 
     // Deletes the keyword sweet tooth and the Tweet
