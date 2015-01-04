@@ -6,48 +6,48 @@ angular.module('MyApp.setup', ['ui.router'])
 		.state('setup', {
 			url: '/setup',
 			templateUrl: 'partials/setup/setup.html',
-			controller: 'SetupCtrl'
+			controller: 'SetupController'
 		})
 		.state('setup.details', {
 			url: '/details',
 			templateUrl: 'partials/setup/setup.details.html',
-			controller: 'DetailsCtrl'
+			controller: 'DetailsController'
 		})
 		.state('setup.campaign', {
 			url: '/campaign',
 			templateUrl: 'partials/setup/setup.campaign.html',
-			controller: 'CampaignCtrl'
+			controller: 'CampaignController'
 		})
 		.state('setup.urlexternal', {
 			url: '/campaign/urlexternal',
 			templateUrl: 'partials/setup/setup.urlexternal.html',
-			controller: 'UrlCtrl'
+			controller: 'UrlController'
 		})
 		.state('setup.incentive', {
 			url: '/incentive',
 			templateUrl: 'partials/setup/setup.incentive.html',
-			controller: 'SetupCtrl'
+			controller: 'SetupController'
 		})
 		.state('setup.review', {
 			url: '/review',
 			templateUrl: 'partials/setup/setup.review.html',
-			controller: 'SetupCtrl'
+			controller: 'SetupController'
 		})
 }])
-.controller('SetupCtrl', ['$scope', '$stateParams', '$location', 
+.controller('SetupController', ['$scope', '$stateParams', '$location',
 	function($scope, $stateParams, $location){
-		
+
 }])
-.controller('DetailsCtrl', ['$scope', 
+.controller('DetailsController', ['$scope',
 	function($scope){
-		
+
 }])
-.controller('CampaignCtrl', ['$scope', 
+.controller('CampaignController', ['$scope',
 	function($scope){
-		
+
 }])
 
-.controller('UrlCtrl', ['$scope', 'ModalService',
+.controller('UrlController', ['$scope', 'ModalService',
 	function($scope, ModalService){
 
 		$(function(){
@@ -81,7 +81,7 @@ angular.module('MyApp.setup', ['ui.router'])
 
 			var found = $scope.cities.reduce(function(previous, i)
 			{
-			
+
 			$scope.duplicateCity = false;
 
 			if ($scope.city === i) return true;
@@ -111,7 +111,7 @@ angular.module('MyApp.setup', ['ui.router'])
 
 			var found = $scope.keywords.reduce(function(previous, i)
 			{
-			
+
 			$scope.duplicateKeyword = false;
 
 			if ($scope.keyword === i) return true;
@@ -140,7 +140,7 @@ angular.module('MyApp.setup', ['ui.router'])
 
 			var found = $scope.restrictKeywords.reduce(function(previous, i)
 			{
-			
+
 			$scope.duplicateRestrictKeyword = false;
 
 			if ($scope.restricted === i) return true;
@@ -158,9 +158,6 @@ angular.module('MyApp.setup', ['ui.router'])
 
 
 	    $scope.review = function(){
-	    	
+
 	    }
-
-
-
 }])

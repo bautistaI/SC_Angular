@@ -12,7 +12,7 @@ li
 {
   list-style: none;
 }
-.menu 
+.menu
 {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -20,28 +20,28 @@ li
   padding: 0 0 0.5em;
 }
 
-.menu:before 
+.menu:before
 {
   content: "[";
 }
 
-.menu:after 
+.menu:after
 {
   content: "]";
 }
 
-.menu > li 
+.menu > li
 {
   display: inline;
 }
 
-.menu > li:before 
+.menu > li:before
 {
   content: "|";
   padding-right: 0.3em;
 }
 
-.menu > li:nth-child(1):before 
+.menu > li:nth-child(1):before
 {
   content: "";
   padding: 0;
@@ -128,6 +128,9 @@ li
 /* --- @end Animation --- */
 
 // ======== Override Bootstrap Styles ==========
+.container{
+    width: 100%;
+}
 .container-fluid{
   margin-right: 10px;
   margin-left: 10px;
@@ -139,7 +142,7 @@ li
 
 // =============   Style Colors =============
 // gray
-$neutral: #E7EBEF; 
+$neutral: #E7EBEF;
 // light-gray
 $hover-neutral: #D3D6DA;
 
@@ -148,7 +151,7 @@ $hover-neutral: #D3D6DA;
 }
 $blue: #399ACF;
 
-$pomegranate: #C0392B; 
+$pomegranate: #C0392B;
 
 $carrot: #E67E22;
 
@@ -160,6 +163,8 @@ $asphalt: #34495E;
 
 $emerald: #2ECC71;
 
+$yellow: #F1C40F;
+
 hr{
   border-top: 1px solid darken($neutral, 5%);
 }
@@ -167,6 +172,9 @@ hr{
 
 
 // ======================== SETUP ========================
+.container .setup{
+    width: 80%;
+}
 .required{
   color: $pomegranate;
   }
@@ -420,7 +428,7 @@ span.info{
 
 // ==============  SIDEBAR LEFT ================
 .sidebar-left{
-  padding: 0 40px;
+  padding: 0;
   .current-account{
     a{
       font-size: 14px;
@@ -451,7 +459,7 @@ span.info{
     border-bottom: 1px solid #fff;
     transition: all 300ms linear;
     &:hover{
-      background: $hover-neutral; 
+      background: $hover-neutral;
     }
   }
   a{
@@ -467,8 +475,8 @@ span.info{
 .sorting-tweets{
   font-size: 11px;
   margin-bottom: 0;
-  width: 97.1%;
-  margin-left: 10px;
+  // width: 97.5%;
+  // margin-left: 10px;
   border-top: 1px solid darken($neutral, 10%);
   border-left: 1px solid darken($neutral, 10%);
   border-right: 1px solid darken($neutral, 10%);
@@ -490,6 +498,10 @@ span.info{
 
 
 // =============  TWEET STREAM ===================
+.container-fluid.tweets-stream{
+    margin-right: 0;
+    margin-left: 0;
+}
 .tweets-stream{
   min-height: 600px;
   max-height: 700px;
@@ -592,8 +604,7 @@ span.info{
     transition: 300ms all linear;
       &.active
       {
-        background: $neutral;
-        text-shadow: 0 1px 1px $asbestos;
+        background: lighten($blue, 30%);
       }
       a
       {
@@ -604,15 +615,25 @@ span.info{
         {
           color: $neutral;
           vertical-align: middle;
-          padding-right: 10px;
+          padding-right: 5px;
           cursor: pointer;
         }
         .fui-eye
         {
           cursor: pointer;
           color: $asphalt;
-          vertical-align: middle;
-          padding-right: 10px;
+          background: $neutral;
+          padding: 1px 4px 0;
+          font-size: 11px;
+          border-radius: 50%;
+          position: relative;
+          top: 4px;
+          margin-right: 5px;
+          transition: 300ms all linear;
+          &:hover{
+            background: darken($neutral, 15%);
+            color: lighten($neutral, 15%);
+          }
         }
       }
     .tweets-amount
@@ -625,15 +646,58 @@ span.info{
       white-space: nowrap;
       position: relative;
       top: -1px;
-      &.associated{background: $asphalt;}
+      &.associated{background: $yellow;}
       &.deleted{background: $pomegranate;}
       &.replied{background: $emerald;}
     }
   }
 }
-
-
 // -----------------------------------------
+
+// ======== SIDEBAR RIGHT  ===============
+
+
+// ----- CAROUSEL -------
+.carousel{
+    min-height: 250px;
+    h1{
+        font-size: 19px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+.carousel-indicators .active{
+    background-color: $blue;
+    width: 15px;
+    height: 15px;
+}
+.carousel-indicators li{
+    background-color: #000;
+    width: 13px;
+    height: 13px;
+}
+.carousel-indicators{
+    top: 210px;
+}
+// -----------------------
+
+
+.keyphrase-performance{
+    h1{
+        font-size: 19px;
+    }
+    img{
+        margin-left: 2%;
+        border: 3px solid $blue;
+        border-radius: 50%;
+        padding: 5px;
+        transition: 300ms all linear;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
 // ===============================================
 
 
@@ -766,21 +830,7 @@ p.subtitle{
   .copyright{
     padding-top: 10px;
     a{
-      color: #FFF; 
+      color: #FFF;
     }
   }
 // =================== @end Footer ===============================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-

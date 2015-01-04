@@ -6,25 +6,25 @@ angular.module('MyApp.account', ['ui.router'])
   	.state('account', {
       url: '/account',
       templateUrl: 'partials/account/account.html',
-      controller: 'AccountCtrl'
-    }) 
+      controller: 'AccountController'
+    })
     .state('account.settings', {
     	url: '/settings',
     	templateUrl: 'partials/account/account.settings.html',
-    	controller: 'SettingsCtrl'
+    	controller: 'SettingsController'
     })
     .state('account.billing', {
       url: '/billing',
       templateUrl: 'partials/account/account.billing.html',
-      controller: 'BillingCtrl'
+      controller: 'BillingController'
     })
     .state('account.email', {
       url: '/email',
       templateUrl: 'partials/account/account.email.html',
-      controller: 'EmailCtrl'
+      controller: 'EmailController'
     })
 }])
-.controller('AccountCtrl', ['$scope', '$stateParams',
+.controller('AccountController', ['$scope', '$stateParams',
 	function($scope, $stateParams, $locale){
     $scope.account = {
       phone: "111-111-1111",
@@ -33,7 +33,7 @@ angular.module('MyApp.account', ['ui.router'])
       password: "*********"
     }
 }])
-.controller('SettingsCtrl', ['$scope', '$stateParams', 
+.controller('SettingsController', ['$scope', '$stateParams',
   function($scope, $stateParams){
     $scope.cancel = function(){
       $scope.signUp = true;
@@ -43,10 +43,10 @@ angular.module('MyApp.account', ['ui.router'])
       $scope.signUp = false;
       $scope.paymentCreditCard = true;
     }
-    
+
     $scope.submit = function(){
 
-     
+
       // $scope.paymentForm = false;
       // $scope.paymentCreditCard = false;
       // $scope.paymentReceived = true;
@@ -60,14 +60,14 @@ angular.module('MyApp.account', ['ui.router'])
     }
   }
 ])
-.controller('BillingCtrl', ['$scope', '$stateParams', 
+.controller('BillingController', ['$scope', '$stateParams',
   function($scope, $stateParams){
-    
+
   }
 ])
-.controller('EmailCtrl', ['$scope', '$stateParams', 
+.controller('EmailController', ['$scope', '$stateParams',
   function($scope, $stateParams){
-    
+
   }
 ])
 .run(function(editableOptions) {

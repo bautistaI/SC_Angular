@@ -6,18 +6,21 @@ angular.module('MyApp.tweets', ['ui.router'])
   .state('tweets', {
     url: '/tweets',
     templateUrl: 'partials/tweets/stream.html',
-    controller: 'TweetsCtrl'
+    controller: 'TweetsController'
   })
 }])
-.controller('TweetsCtrl', ['$scope', 'ModalService',
+.controller('TweetsController', ['$scope', 'ModalService',
   function($scope, ModalService){
     // FIXME! for some reason when I use ng-include the tooltips won't work. I have to bring the code inside the stream.html for the controller to kick in :(
     $(function(){
         $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
 
+    // CAROUSEL OPTIONS
+    $('.carousel').carousel({
+        interval: 5000
+    });
 
-// FIXME!  I have several functions that are being repeated. I'd like to make a factory or service to host that functionality there instead of in this controller
 // ========= SWEET TOOTH KEYWORD INTERACTION ===============
 
     // Deletes the keyword sweet tooth and the Tweet
@@ -29,8 +32,17 @@ angular.module('MyApp.tweets', ['ui.router'])
         $scope.Sweet = true;
         $scope.isSweetActive = true;
         $scope.deleteSweetTooth = true;
+        Messenger.options = {
+          extraClasses: 'messenger-fixed messenger-on-right messenger-on-top'
+        }
+        Messenger().post({
+          message: 'Succesfully deleted tweet!',
+          type: 'success',
+          hideAfter: 2
+        });
       }
     };
+
     // Toggles visibility of keyword sweet tooth
     $scope.hideSweet = function(){
       if($scope.Sweet === true){
@@ -43,7 +55,7 @@ angular.module('MyApp.tweets', ['ui.router'])
     };
 
 // ========= CUPCAKE KEYWORD INTERACTION ===============
-    
+
     // Deletes the keyword cupcake and the Tweet
     $scope.delCupcake = function(){
       if($scope.Cupcake === true){
@@ -53,6 +65,14 @@ angular.module('MyApp.tweets', ['ui.router'])
         $scope.Cupcake = true;
         $scope.isCupcake = true;
         $scope.deleteCupcake = true;
+        Messenger.options = {
+          extraClasses: 'messenger-fixed messenger-on-right messenger-on-top'
+        }
+        Messenger().post({
+          message: 'Succesfully deleted tweet!',
+          type: 'success',
+          hideAfter: 2
+        });
       }
     };
 
@@ -68,7 +88,7 @@ angular.module('MyApp.tweets', ['ui.router'])
     };
 
 // ========= CAKE KEYWORD INTERACTION ==================
-  
+
     // Deletes the keyword cake and the Tweet
      $scope.delCake = function(){
       if($scope.Cake === true){
@@ -78,6 +98,14 @@ angular.module('MyApp.tweets', ['ui.router'])
         $scope.Cake = true;
         $scope.isCake = true;
         $scope.deleteCake = true;
+        Messenger.options = {
+          extraClasses: 'messenger-fixed messenger-on-right messenger-on-top'
+        }
+        Messenger().post({
+          message: 'Succesfully deleted tweet!',
+          type: 'success',
+          hideAfter: 2
+        });
       }
     };
 
@@ -93,7 +121,7 @@ angular.module('MyApp.tweets', ['ui.router'])
     };
 
 // ========= COOKIE KEYWORD INTERACTION ==================
-    
+
     // Deletes the keyword cookie and the Tweet
     $scope.delCookie = function(){
       if($scope.Cookie === true){
@@ -103,6 +131,14 @@ angular.module('MyApp.tweets', ['ui.router'])
         $scope.Cookie = true;
         $scope.isCookie = true;
         $scope.deleteCookie = true;
+        Messenger.options = {
+          extraClasses: 'messenger-fixed messenger-on-right messenger-on-top'
+        }
+        Messenger().post({
+          message: 'Succesfully deleted tweet!',
+          type: 'success',
+          hideAfter: 2
+        });
       }
     };
 

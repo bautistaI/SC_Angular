@@ -1,0 +1,60 @@
+<!-- when trying to serve this file using ng-include the tooltip won't work :/ -->
+<p class="campaign-keywords-module text-center">CAMPAIGN KEYWORDS</p>
+
+<div class="keywords">
+    <ul>
+        <li ng-class="{active: isSweetActive}" ng-hide="deleteSweetTooth">
+            <a>
+                sweet tooth
+                <!-- ++++ same functionality for all keywords ++++ -->
+                <!-- delete icon / "deletes" the tweet with keyword sweet tooth $scope Sweet -->
+                <!-- ng-showdeleteIcon toggles between delete and visibility icons whithin the keyword-settings above -->
+                <span class="fui-cross-circle pull-right" ng-click="delSweet()"></span>
+
+                <!-- visibility icon / hides the tweet associated with sweet tooth -->
+                <span class="fui-eye pull-right" ng-click="hideSweet()"></span>
+            </a>
+            <!-- number of current tweets associated with this keyword  -->
+            <span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets with this keyphrase">3</span>
+            <!-- <span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you replied with this keyphrase">5</span>
+            <span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you deleted with this keyphrase">7</span> -->
+
+        </li>
+
+        <li ng-class="{active: isCupcake}" ng-hide="deleteCupcake">
+            <a>
+                cupcake
+                <span class="fui-cross-circle pull-right" ng-click="delCupcake()"></span>
+                <span class="fui-eye pull-right" ng-click="hideCupcake()"></span>
+            </a>
+            <span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets with this keyphrase">4</span>
+            <!-- <span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you replied with this keyphrase">27</span>
+            <span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you deleted with this keyphrase">8</span> -->
+        </li>
+
+        <li ng-class="{active: isCake}" ng-hide="deleteCake">
+            <a>
+                cake
+                <span class="fui-cross-circle pull-right" ng-click="delCake()"></span>
+                <span class="fui-eye pull-right" ng-click="hideCake()"></span>
+            </a>
+            <span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets with this keyphrase">2</span>
+            <!-- <span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you replied with this keyphrase">4</span>
+            <span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you deleted with this keyphrase">14</span> -->
+        </li>
+
+        <li ng-class="{active: isCookie}" ng-hide="deleteCookie">
+            <a>
+                cookie
+                <span class="fui-cross-circle pull-right" ng-click="delCookie()"></span>
+                <span class="fui-eye pull-right" ng-click="hideCookie()"></span>
+            </a>
+            <span class="tweets-amount associated text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets with this keyphrase">1</span>
+            <!-- <span class="tweets-amount replied text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you replied with this keyphrase">3</span>
+            <span class="tweets-amount deleted text-center add-space-left" data-toggle="tooltip" data-placement="right" title="Tweets you deleted with this keyphrase">2</span> -->
+        </li>
+    </ul>
+</div><!-- @end keywords -->
+
+<!-- Add a Keyword -->
+<!-- <input type="text" name="" class="form-control" placeholder="Enter a keyword or keyword phrase"> -->

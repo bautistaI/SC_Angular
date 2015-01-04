@@ -1,10 +1,30 @@
+<!-- Sorting Tweets Navbar -->
+<ul class="sorting-tweets navbar navbar-default navbar-static-top">
+	<li class="col-md-5 col-xs-5 filter">SORT BY:
+		<button class="btn btn-default">OLDEST</button>
+		<button class="btn btn-default">NEWEST</button>
+		<button class="btn btn-default">RELEVANCE</button>
+	</li>
+	<li class="col-md-3 col-xs-3 filter">
+		PROFANITY:
+		<button class="btn btn-default">NO</button>
+		<button class="btn btn-default">YES</button>
+	</li>
+	<li class="col-md-4 col-xs-4 filter">
+		TWEETS PER PAGE:
+		<button class="btn btn-default">5</button>
+		<button class="btn btn-default active">10</button>
+		<button class="btn btn-default">20</button>
+	</li>
+</ul>
+
 <div class="container-fluid tweets-stream">
-	<div class="row padded animated bounceInDown">
+	<div class="row padded">
 		<ul class="tweet" ng-hide="Cake">
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/nature"></li>
-			<li class="tweet-name add-space-left add-space-right">Ryan Around</li>
-			<li class="tweet-screen-name">@Ryan Around <span class="period">.</span>2m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">Anyone know if <strong>Cake</strong> is putting out another album anytime soon? </li> 
+			<li class="tweet-name add-space-left add-space-right">Lisa Around</li>
+			<li class="tweet-screen-name">@Lisa Around <span class="period">.</span>2m <span class="location fui-location pull-right"></span></li>
+			<li class="tweet-text clearfix">I'm getting married! any <strong>cake</strong> suggestions? </li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -18,7 +38,7 @@
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/sports"></li>
 			<li class="tweet-name add-space-left add-space-right">Simon Brewer</li>
 			<li class="tweet-screen-name">@Simon Brewer <span class="period">.</span>45m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">I now understand <strong>Cookie</strong> Monster’s feels. </li> 
+			<li class="tweet-text clearfix">I now understand <strong>Cookie</strong> Monster’s feels. </li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -32,7 +52,7 @@
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/abstract"></li>
 			<li class="tweet-name add-space-left add-space-right">Mila Kunis</li>
 			<li class="tweet-screen-name">@Mila Kunis <span class="period">.</span>2h <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">Ugh, I have such a bad <strong>sweet tooth</strong> lately.</li> 
+			<li class="tweet-text clearfix">Ugh, I have such a bad <strong>sweet tooth</strong> lately.</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -41,12 +61,12 @@
 				<a class="view-summary pull-right" href>View summary</a>
 			</li>
 		</ul>
-		
+
 		<ul class="tweet" ng-hide="Cupcake">
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/cats"></li>
 			<li class="tweet-name add-space-left add-space-right">Patty Walters</li>
 			<li class="tweet-screen-name">@Patty Walters <span class="period">.</span>57m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">I could really go for a <strong>cupcake</strong> right now!</li> 
+			<li class="tweet-text clearfix">I could really go for a <strong>cupcake</strong> right now!</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -60,7 +80,7 @@
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/people"></li>
 			<li class="tweet-name add-space-left add-space-right">Beth Broderick</li>
 			<li class="tweet-screen-name">@Beth Broderick <span class="period">.</span>1h <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">My <strong>sweet tooth</strong> just won’t quit! It may be time to give in…</li> 
+			<li class="tweet-text clearfix">My <strong>sweet tooth</strong> just won’t quit! It may be time to give in…</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -74,7 +94,7 @@
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/transport"></li>
 			<li class="tweet-name add-space-left add-space-right">Shane Filan</li>
 			<li class="tweet-screen-name">@Shane Filan <span class="period">.</span>15m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">Oreo <strong>cupcake.</strong> That is all.</li> 
+			<li class="tweet-text clearfix">Oreo <strong>cupcake.</strong> That is all.</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -83,12 +103,12 @@
 				<a class="view-summary pull-right" href>View summary</a>
 			</li>
 		</ul>
-		
+
 		<ul class="tweet" ng-hide="Cake">
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/business"></li>
 			<li class="tweet-name add-space-left add-space-right">Ethan Narcotte</li>
 			<li class="tweet-screen-name">@Ethan Narcotte <span class="period">.</span>35m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">Anyone have a recommendation on where I can get a birthday <strong>cake</strong> for Taylor?</li> 
+			<li class="tweet-text clearfix">Anyone have a recommendation on where I can get a birthday <strong>cake</strong> for Taylor?</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -102,7 +122,7 @@
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/animals"></li>
 			<li class="tweet-name add-space-left add-space-right">Ben Montague</li>
 			<li class="tweet-screen-name">@Ben Montague <span class="period">.</span>18m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">Red velvet <strong>cupcake?</strong> Gimme.</li> 
+			<li class="tweet-text clearfix">Red velvet <strong>cupcake?</strong> Gimme.</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -116,7 +136,7 @@
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/fashion"></li>
 			<li class="tweet-name add-space-left add-space-right">Amanda Blain</li>
 			<li class="tweet-screen-name">@Amanda Blain <span class="period">.</span>1h <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">I’ve got a <strong>sweet tooth</strong> and it’s just for you</li> 
+			<li class="tweet-text clearfix">I’ve got a <strong>sweet tooth</strong> and it’s just for you</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -126,11 +146,11 @@
 			</li>
 		</ul>
 
-		<ul class="tweet" ng-hide="Cookie">
+		<!-- <ul class="tweet" ng-hide="Cookie">
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/food"></li>
 			<li class="tweet-name add-space-left add-space-right">Annie Hayat</li>
 			<li class="tweet-screen-name">@Annie Hayat <span class="period">.</span>15m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">I need a white chocolate chip macadamia nut <strong>cookie</strong> in my life</li> 
+			<li class="tweet-text clearfix">I need a white chocolate chip macadamia nut <strong>cookie</strong> in my life</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -138,13 +158,13 @@
 				<a class="more-icon">...</a>
 				<a class="view-summary pull-right" href>View summary</a>
 			</li>
-		</ul>
+		</ul> -->
 
 		<ul class="tweet" ng-hide="Cupcake">
 			<li class="tweet-image"><img class="img-rounded" src="http://lorempixel.com/50/50/city"></li>
 			<li class="tweet-name add-space-left add-space-right">Cindy Hively</li>
 			<li class="tweet-screen-name">@Cindy Hively <span class="period">.</span>54m <span class="location fui-location pull-right"></span></li>
-			<li class="tweet-text clearfix">This <strong>cupcake</strong> is giving me life!!!</li> 
+			<li class="tweet-text clearfix">This <strong>cupcake</strong> is giving me life!!!</li>
 			<li class="supporting-icons">
 				<a class="reply-icon glyphicon glyphicon-share-alt"></a>
 				<a class="retweet-icon glyphicon glyphicon-retweet"></a>
@@ -154,4 +174,8 @@
 			</li>
 		</ul>
 	</div>
+</div>
+<!-- Get more Tweets Button -->
+<div class="load-more-tweets text-center">
+	<button class="btn btn-info">GET MORE TWEETS</button>
 </div>

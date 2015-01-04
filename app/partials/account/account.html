@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row padded">
-		<div class="col-md-3 col-xs-12 sidebar-left pull-left">
-			<div ng-include=" 'partials/tweets/twitter_account/current-account.html' "></div>
+		<div class="col-md-4 col-xs-4 sidebar-left pull-left">
+			<current-account></current-account>
 			<ul class="text-left account-menu">
 				<li><a role="button" ng-href="#/account/settings">Account Settings</a></li>
 				<li><a role="button" ng-href="#/account/billing">Billing Information</a></li>
@@ -9,7 +9,7 @@
 			</ul>
 		</div>
 		<div class="content">
-  		<div ui-view class="col-md-9 col-xs-9"></div>
+  		<div ui-view class="col-md-8 col-xs-8"></div>
 		</div>
 	</div>
 </div>

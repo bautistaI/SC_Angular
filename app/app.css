@@ -114,6 +114,9 @@ li {
   opacity: 0; }
 
 /* --- @end Animation --- */
+.container {
+  width: 100%; }
+
 .container-fluid {
   margin-right: 10px;
   margin-left: 10px; }
@@ -126,6 +129,9 @@ li {
 
 hr {
   border-top: 1px solid #d8dee5; }
+
+.container .setup {
+  width: 80%; }
 
 .required {
   color: #c0392b; }
@@ -321,7 +327,7 @@ span.info {
   width: 80%; }
 
 .sidebar-left {
-  padding: 0 40px; }
+  padding: 0; }
   .sidebar-left .current-account a {
     font-size: 14px;
     padding-bottom: 2px;
@@ -357,8 +363,6 @@ span.info {
 .sorting-tweets {
   font-size: 11px;
   margin-bottom: 0;
-  width: 97.1%;
-  margin-left: 10px;
   border-top: 1px solid #c8d1db;
   border-left: 1px solid #c8d1db;
   border-right: 1px solid #c8d1db; }
@@ -372,6 +376,10 @@ span.info {
   .sorting-tweets .filter {
     position: relative;
     top: 15px; }
+
+.container-fluid.tweets-stream {
+  margin-right: 0;
+  margin-left: 0; }
 
 .tweets-stream {
   min-height: 600px;
@@ -456,8 +464,7 @@ span.info {
   border-radius: 10px;
   transition: 300ms all linear; }
   .keywords li.active {
-    background: #e7ebef;
-    text-shadow: 0 1px 1px #7f8c8d; }
+    background: #b4d9ed; }
   .keywords li a {
     color: #FFF;
     padding: 3px 10px;
@@ -465,13 +472,22 @@ span.info {
     .keywords li a .fui-cross-circle {
       color: #e7ebef;
       vertical-align: middle;
-      padding-right: 10px;
+      padding-right: 5px;
       cursor: pointer; }
     .keywords li a .fui-eye {
       cursor: pointer;
       color: #34495e;
-      vertical-align: middle;
-      padding-right: 10px; }
+      background: #e7ebef;
+      padding: 1px 4px 0;
+      font-size: 11px;
+      border-radius: 50%;
+      position: relative;
+      top: 4px;
+      margin-right: 5px;
+      transition: 300ms all linear; }
+      .keywords li a .fui-eye:hover {
+        background: #b9c5d0;
+        color: white; }
   .keywords li .tweets-amount {
     color: #FFF;
     cursor: default;
@@ -482,11 +498,42 @@ span.info {
     position: relative;
     top: -1px; }
     .keywords li .tweets-amount.associated {
-      background: #34495e; }
+      background: #f1c40f; }
     .keywords li .tweets-amount.deleted {
       background: #c0392b; }
     .keywords li .tweets-amount.replied {
       background: #2ecc71; }
+
+.carousel {
+  min-height: 250px; }
+  .carousel h1 {
+    font-size: 19px; }
+  .carousel p {
+    font-size: 15px; }
+
+.carousel-indicators .active {
+  background-color: #399acf;
+  width: 15px;
+  height: 15px; }
+
+.carousel-indicators li {
+  background-color: #000;
+  width: 13px;
+  height: 13px; }
+
+.carousel-indicators {
+  top: 210px; }
+
+.keyphrase-performance h1 {
+  font-size: 19px; }
+.keyphrase-performance img {
+  margin-left: 2%;
+  border: 3px solid #399acf;
+  border-radius: 50%;
+  padding: 5px;
+  transition: 300ms all linear; }
+  .keyphrase-performance img:hover {
+    opacity: 0.5; }
 
 /* ============================ ACCOUNT (account settings, billing and emai settings) ========================== */
 .account-settings {

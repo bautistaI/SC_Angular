@@ -4,7 +4,12 @@ angular.module('MyApp', [
   'MyApp.account',
   'MyApp.tweets',
   'MyApp.setup',
-  'ngAnimate', 
+  'MyApp.reports',
+  'MyApp.campaign',
+  'MyApp.tweetServices',
+  'MyApp.currentAccountServices', 
+  'MyApp.navigationServices',
+  'ngAnimate',
   'ui.router',
   'xeditable',
   'google.places',
@@ -14,7 +19,7 @@ angular.module('MyApp', [
 // 'google-maps'.ns(),
 
 
-.config(['$stateProvider', '$urlRouterProvider', 
+.config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider){
 	// $urlRouterProvider.otherwise("/")
 
@@ -38,5 +43,3 @@ angular.module('MyApp', [
     }, 1000);
   });
 })
-
-
