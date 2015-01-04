@@ -7,7 +7,7 @@ angular.module('MyApp', [
   'MyApp.reports',
   'MyApp.campaign',
   'MyApp.tweetServices',
-  'MyApp.currentAccountServices', 
+  'MyApp.currentAccountServices',
   'MyApp.navigationServices',
   'ngAnimate',
   'ui.router',
@@ -22,6 +22,7 @@ angular.module('MyApp', [
 .config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider){
 	// $urlRouterProvider.otherwise("/")
+    
 
   $stateProvider
 		.state('home', {

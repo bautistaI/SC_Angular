@@ -22,24 +22,50 @@ angular.module('MyApp.tweets', ['ui.router'])
     });
 
 // ========= SWEET TOOTH KEYWORD INTERACTION ===============
+    // FIXME!  need to make all this delete and toggle visibility function more effective, instead of repeating code. I was trying
+    // to implement a directive but it doesn't quite work.
 
     // Deletes the keyword sweet tooth and the Tweet
     $scope.delSweet = function(){
-      if($scope.Sweet === true){
+        // I want to run this and on confirm perform the deletion of the keyword or cancel the action.
+        // http://tristanedwards.me/sweetalert
+        // sweetAlert({
+        //     title: "Are you sure?",
+        //     text: "Tweets associated with this keyword would be deleted from your Tweet Stream!",
+        //     type: "warning",
+        //     showCancelButton: true,
+        //     confirmButtonColor: "#DD6B55",
+        //     confirmButtonText: "Yes, delete it!",
+        //     cancelButtonText: "No, cancel plx!"
+        //     },
+        //     function(isConfirm){
+        //             if(isConfirm){
+        //                 $scope.Sweet = false;
+        //                 $scope.isSweetActive = false;
+        //             }else{
+        //                 $scope.Sweet = true;
+        //                 $scope.isSweetActive = true;
+        //                 $scope.deleteSweetTooth = true;
+        //             }
+        //     });
+
+    // This is part of the original code before trying to implement the swal function
+      if($scope.Sweet){
         $scope.Sweet = false;
         $scope.isSweetActive = false;
       }else{
         $scope.Sweet = true;
         $scope.isSweetActive = true;
         $scope.deleteSweetTooth = true;
-        Messenger.options = {
-          extraClasses: 'messenger-fixed messenger-on-right messenger-on-top'
-        }
-        Messenger().post({
-          message: 'Succesfully deleted tweet!',
-          type: 'success',
-          hideAfter: 2
-        });
+
+        // Messenger.options = {
+        //   extraClasses: 'messenger-fixed messenger-on-right messenger-on-top'
+        // }
+        // Messenger().post({
+        //   message: 'Succesfully deleted tweet!',
+        //   type: 'success',
+        //   hideAfter: 2
+        // });
       }
     };
 
